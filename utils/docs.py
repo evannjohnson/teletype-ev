@@ -56,7 +56,7 @@ OPS_SECTIONS = [
     "orca",
     "justfriends",
     "fader",
-    "er301",
+    # "er301",
     "telex_i",
     "telex_o",
     "crow",
@@ -66,7 +66,7 @@ OPS_SECTIONS = [
     "wslashdelay",
     "wslashsynth",
     "disting",
-    "matrixarchate",
+    # "matrixarchate",
     "i2c2midi"
 ]
 
@@ -96,7 +96,7 @@ def common_md():
     intro = ""
     intro += Path(DOCS_DIR / "intro.md") \
         .read_text().replace("VERSION", TT_VERSION["tag"][1:]) + "\n\n"
-    intro += Path(DOCS_DIR / "whats_new.md").read_text() + "\n\n"
+    # intro += Path(DOCS_DIR / "whats_new.md").read_text() + "\n\n"
     intro += Path(DOCS_DIR / "quickstart.md").read_text() + "\n\n"
     intro += Path(DOCS_DIR / "keys.md").read_text() + "\n\n"
     intro += Path(DOCS_DIR / "ops.md").read_text() + "\n\n"
@@ -159,7 +159,8 @@ def common_md():
 
     changelog = Path(ROOT_DIR / "CHANGELOG.md").read_text() + "\n\n"
 
-    pdf_output = intro + pdf_ops_section + advanced + pdf_alpha_ops + missing + changelog
+    # pdf_output = intro + pdf_ops_section + advanced + pdf_alpha_ops + missing + changelog
+    pdf_output = intro + pdf_ops_section + advanced
     html_output = intro + html_ops_section + advanced + html_alpha_ops + missing + changelog
 
     return {"pdf": pdf_output, "html": html_output}
