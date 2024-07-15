@@ -1,0 +1,1 @@
+The utils/docs.py file needs to be run from the docs/ directory, like 'python ../utils/docs.py'

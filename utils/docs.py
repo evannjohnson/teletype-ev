@@ -50,10 +50,10 @@ OPS_SECTIONS = [
     "calibration",
     "i2c",
     "ansible",
-    "whitewhale",
-    "meadowphysics",
-    "earthsea",
-    "orca",
+    # "whitewhale",
+    # "meadowphysics",
+    # "earthsea",
+    # "orca",
     "justfriends",
     "fader",
     # "er301",
@@ -65,7 +65,7 @@ OPS_SECTIONS = [
     "wslashtape",
     "wslashdelay",
     "wslashsynth",
-    "disting",
+    # "disting",
     # "matrixarchate",
     "i2c2midi"
 ]
@@ -145,6 +145,24 @@ def common_md():
             html_ops_section += html_op_list_template.render(ops=ops.values())
 
     advanced = Path(DOCS_DIR / "advanced.md").read_text() + "\n\n"
+    gridDocsBW = [
+        "teletype-wiki/GRID-OPERATORS.md",
+        # "teletype-wiki/GRID-INTEGRATION.md",
+        "teletype-wiki/BASIC-VISUALIZATIONS.md",
+        "teletype-wiki/BUTTONS.md",
+        "teletype-wiki/STARTING-SIMPLE.md",
+        "teletype-wiki/TRIGGER-SEQUENCER.md",
+        "teletype-wiki/SAVE-GRID-STATE.md",
+        "teletype-wiki/GROUPS.md",
+        "teletype-wiki/GRID-VISUALIZER-rawimages_converted.md"
+    ]
+    for doc in gridDocsBW:
+        advanced += Path(DOCS_DIR / doc).read_text() + "\n\n"
+    
+    # gridDocsColor = [
+    #     "teletype-wiki/GRID-CONTROL-MODE-rawimages_converted.md",
+    # ]
+    advanced += Path(DOCS_DIR / "teletype-wiki/GRID-CONTROL-MODE-rawimages_converted.md").read_text() + "\n\n"
 
     pdf_alpha_ops = "\\appendix\n\n"
     pdf_alpha_ops += "# Alphabetical list of OPs and MODs\n\n"
@@ -160,7 +178,7 @@ def common_md():
     changelog = Path(ROOT_DIR / "CHANGELOG.md").read_text() + "\n\n"
 
     # pdf_output = intro + pdf_ops_section + advanced + pdf_alpha_ops + missing + changelog
-    pdf_output = intro + pdf_ops_section + advanced
+    pdf_output = intro + pdf_ops_section + advanced + pdf_alpha_ops
     html_output = intro + html_ops_section + advanced + html_alpha_ops + missing + changelog
 
     return {"pdf": pdf_output, "html": html_output}
