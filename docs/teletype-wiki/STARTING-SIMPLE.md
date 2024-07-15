@@ -1,3 +1,4 @@
+### Starting simple
 There are many different ways to use a grid with a teletype. Let's try some simple examples to show the range of things possible.
   
 But first let's review the conventions behind grid ops that should make it easier to memorize them. As you've noticed all grid ops start with `G.`. This is followed by 3 letters signifying a control: `G.BTN` for buttons, `G.FDR` for faders etc. 
@@ -21,7 +22,7 @@ Group ops `G.GBTN.#` and `G.GFDR.#` allow you to get/set properties for a group 
   
 All ops can be roughly grouped as follows: general use, groups, drawing, buttons, faders and area ops. There are some specialized ops as well that will be handy for some specific use cases (and make sure to take advantage of being able to rotate and dim grid!). And now let's see them in action...
   
-### TRIGGER VISUALIZER
+### Trigger Visualizer
 
 It can be useful to have some visual feedback about what's going on with your scene. The most obvious candidate is tracking incoming triggers. We could use `G.REC` but it's actually easier to use buttons for this since we won't have to calculate the coordinates. We'll use 4x4 buttons, 2 rows with 4 buttons each:
 
@@ -55,9 +56,11 @@ M:
 
 Now when a button is pressed the corresponding script will execute. This scene can be further expanded by having each button's brightness level correspond to a value of some variable.
 
-[download the scene](https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/trigger_visualizer.txt)
+download the scene:
 
-### SIMPLE SEQUENCER
+https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/trigger_visualizer.txt
+
+### Simple Sequencer
 
 A really simple 16 step sequencer:
 
@@ -83,9 +86,11 @@ This makes the knob control the clock rate and then it calls script 1 to advance
 2:
 `A 15`  
 
-[download the scene](https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/simple_sequencer.txt)
+download the scene:
 
-### LOFI OSCILLOSCOPE
+https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/simple_sequencer.txt
+
+### Lofi Oscilloscope
 
 This is a very low res oscilloscope but can be fun as a way to visualize your patch. 
 
@@ -100,10 +105,11 @@ M:
 
 We clear the whole column first and then draw a dot at `A,B` coordinates. The last line is your time resolution - it'll adjust the Metro rate based on the knob.
 
-[download the scene](https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/lofi_oscilloscope.txt)
+download the scene:
 
-[video demo](https://www.instagram.com/p/BZ9dcUKAAw4)
+https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/lofi_oscilloscope.txt
+
+video demo: https://www.instagram.com/p/BZ9dcUKAAw4
 
 Next we'll try something a bit more complex...
 
-**next: [[TRIGGER SEQUENCER]]**

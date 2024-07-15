@@ -1,3 +1,5 @@
+## Grid studies
+### Basic visualizations
 Let's start with some basic drawing. Open the Metro script and enter the following command:
 
 `G.REC 3 3 4 4 0 RRAND 1 15`
@@ -28,4 +30,3 @@ Just by using these 3 operators you can now visualize your scene with the grid. 
 
 Or you could do something more interesting - how about drawing rectangles with random coordinates and random size where each script uses a different brightness level?
 
-**next: [[BUTTONS]]**

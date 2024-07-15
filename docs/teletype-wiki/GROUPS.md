@@ -1,3 +1,4 @@
+### Groups
 One of the most common tasks when programming a grid interface is updating a group of controls at once. In some cases this could be done with a loop, but loops are not always efficient or even possible. This is where groups can be very helpful. Every grid control belongs to one of the 8 groups. Whenever you initiate a control it will be assigned to the current group. We haven't used groups so far, but that simply means that all our controls where assigned to group 0 - this is the default group for each new scene. To change the current group we use `G.GRP` op:
 
 `G.BTN 0 1 1 1 1 1 0 0`  
@@ -28,4 +29,3 @@ You can also assign scripts to groups, and they will get executed whenever any c
 
 But perhaps the most useful purpose for groups is being able to create paged UIs.
 
-**next: [[PAGES]]**

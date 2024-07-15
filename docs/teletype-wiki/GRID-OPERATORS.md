@@ -1,4 +1,5 @@
-### USAGE
+## Grid operators
+### Usage
 
 Controls are referenced by ids. Buttons can use ids from `0` to `255`, faders can use ids from `0` to `63`. Controls can overlap, and presses are processed by all the controls that include that grid button. `G.LED` and `G.REC` will be applied on top of everything else. 
 
@@ -14,7 +15,7 @@ Also see [[STARTING SIMPLE]]
 
 ***
 
-### GENERAL
+### General
 
 `G.RST`  
 full reset (reset all controls to defaults, clear all LEDs, reset dim level)
@@ -33,7 +34,7 @@ emulate grid key press (set action to `1` for press, `0` for release)
 
 ***
 
-### GROUPS
+### Groups
 
 there are also button and fader specific group ops - see BUTTONS/FADERS sections below
 
@@ -57,7 +58,7 @@ get id of the last group that received input
 
 ***
 
-### LEDS / RECTANGLES
+### LEDS / Rectangles
 
 _to dim set level to -1_  
 _to brighten set level to -2_  
@@ -77,7 +78,7 @@ draw a rectangle using start/end coordinates
 
 ***
 
-### BUTTONS
+### Buttons
 
 `G.BTN id x y w h latch level script`  
 initialize a button in the current group and assign a script (`0` for no script)  
@@ -162,7 +163,7 @@ get y coordinate for the lowest pressed button in a group
 
 ***
 
-### FADERS
+### Faders
 
 `G.FDR id x y w h type level script`  
 initialize fader in the current group and assign a script (`0` for no script)  
@@ -241,7 +242,7 @@ applies to all faders within that group
 
 ***
 
-### X/Y PAD (work in progress)
+### X/Y Pad (work in progress)
 
 `G.XYP`  
 `G.GXYP`  
@@ -262,7 +263,7 @@ applies to all faders within that group
   
 ***
  
-### GAME OF LIFE (work in progress)
+### Game of Life (work in progress)
 
 `G.GOL`  
 `G.GGOL`  

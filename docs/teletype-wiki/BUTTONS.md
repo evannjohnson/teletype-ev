@@ -1,3 +1,4 @@
+### Buttons
 Visualizing things is great, but we want to use grid to control things too. This is easy to do by using operators for grid controls. Grid controls are typical user interface elements such as buttons and faders.
 
 The simplest way to understand how a control works is to try it. But first let's clear the Metro script and 
@@ -58,4 +59,3 @@ The first 8 parameters are the same as used by `G.BTN`: `id x y w h latch level 
 
 As a final exercise for this study, try changing button type to momentary.
 
-**next: [[STARTING SIMPLE]]**

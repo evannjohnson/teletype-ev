@@ -1,3 +1,4 @@
+### Trigger sequencer
 It might seem it would be difficult to create anything more complex than just a few buttons or faders controlling a few things. Let's try something significantly more complex to both prove that it's possible and show that it can be done with just a few lines. Let's build a 6 track 16 step trigger sequencer!
 
 We'll start with the foundation. We'll use the top 6 rows as 6 tracks with 16 steps each. Each step is a separate button. We already know the op to create multiple buttons at once - `G.BTX`. Open the Init script and add the following:
@@ -80,11 +81,17 @@ That's it - a 6 track 16 step trigger/gate sequencer with a start/stop button, j
   
 But what about saving the pattern - if you have a good pattern going you probably don't want to lose it when you turn off your modular! Conveniently, you don't need to add any commands to do this - button and fader states are saved with a scene when you save it to flash or a USB stick, and are loaded automatically when you load a scene. Just remember to save your scene.  
   
-You do need to add scripts to store your sequences if you have a more complex scene where the same group of buttons is used for multiple pages. Bit operations are very useful for this as they will allow you to store a state of 16 buttons in just one pattern value by using individual bits (all values, variables and pattern values in Teletype have 16 bits). To see a detailed example on how to do it see [this post](https://github.com/adamplouff/teletype-snippets/wiki/Grid-Ops-binary-pattern-saving) by @adamplouff.  
+You do need to add scripts to store your sequences if you have a more complex scene where the same group of buttons is used for multiple pages. Bit operations are very useful for this as they will allow you to store a state of 16 buttons in just one pattern value by using individual bits (all values, variables and pattern values in Teletype have 16 bits). To see a detailed example on how to do it see the next section, 'Saving grid state'.
   
-Another improvement that could be made is having a different background level for different sections. This is what groups allow us to do.
+Another improvement that could be made is having a different background level for different sections. This is what groups allow us to do, see the subsequent section 'Groups'.
 
-_see the trigger sequencer in action: https://www.instagram.com/p/BXCbE1sgS-D_  
-_download the complete scene: [grid sequencer](https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/grid_sequencer.txt) | [trigger sequencer](https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/trigger_sequencer.txt)_
+see the trigger sequencer in action: https://www.instagram.com/p/BXCbE1sgS-D_
 
-**next: [[GROUPS]]**
+grid sequencer scene:
+
+https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/grid_sequencer.txt
+
+trigger sequencer scene:
+
+https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/trigger_sequencer.txt
+
