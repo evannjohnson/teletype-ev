@@ -42,11 +42,11 @@ associated with CV output `x` to `y` ms.
 
 [V]
 prototype = "V x"
-short = "converts a voltage to a value usable by the CV outputs (`x` between `0` and `10`)"
+short = "converts a voltage to a value usable by the CV outputs (`x` between 0 and 10)"
 
 [VV]
 prototype = "VV x"
-short = "converts a voltage to a value usable by the CV outputs (`x` between `0` and `1000`, `100` represents 1V)"
+short = "converts a voltage to a value usable by the CV outputs (`x` between 0 and 1000, 100 represents 1V)"
 
 ["IN"]
 prototype = "IN"
@@ -56,8 +56,8 @@ Get the value of the IN jack. This returns a valuue in the range 0-16383.
 """
 
 ["IN.SCALE"]
-prototype = "IN.SCALE min max"
-short = "Set static scaling of the `IN` CV to between `min` and `max`."
+prototype = "IN.SCALE MIN MAX"
+short = "Set static scaling of the `IN` CV to between `MIN` and `MAX`."
 
 ["PARAM"]
 prototype = "PARAM"
@@ -69,7 +69,7 @@ Get the value of the PARAM knob. This returns a valuue in the range 0-16383.
 
 ["PARAM.SCALE"]
 prototype = "PARAM.SCALE min max"
-short = "Set static scaling of the PARAM knob to between `min` and `max`."
+short = "Set static scaling of the PARAM knob to between `MIN` and `MAX`."
 
 ["TR"]
 prototype = "TR x"

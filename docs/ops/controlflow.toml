@@ -8,50 +8,50 @@ If `x` is not zero execute command
 
   1. Intermediate statements always run
 
-    ```text
+    
     SCRIPT 1:
-    IF 0: 0        => do nothing
-    TR.P 1         => always happens
-    ELSE: TR.P 2   => else branch runs because of the previous IF
-    ```
+    IF 0: 0        => DO NOTHING
+    TR.P 1         => ALWAYS HAPPENS
+    ELSE: TR.P 2   => ELSE BRANCH RUNS BECAUSE OF THE PREVIOUS IF
+    
 
   2. `ELSE` without an `IF`
 
-    ```text
+    
     SCRIPT 1:
-    ELSE: TR.P 1   => never runs, as there is no preceding IF
-    ```
+    ELSE: TR.P 1   => NEVER RUNS, AS THERE IS NO PRECEDING IF
+    
 
 
   3. `ELIF` without an `IF`
 
-    ```text
+    
     SCRIPT 1:
-    ELIF 1: TR.P 1  => never runs, as there is no preceding IF
-    ```
+    ELIF 1: TR.P 1  => NEVER RUNS, AS THERE IS NO PRECEDING IF
+    
 
   4. Independent scripts
 
-    ```text
+    
     SCRIPT 1:
-    IF 1: TR.P 1    => pulse output 1
+    IF 1: TR.P 1    => PULSE OUTPUT 1
 
     SCRIPT 2:
-    ELSE: TR.P 2    => never runs regardless of what happens in script 1
-                       (see example 2)
-    ```
+    ELSE: TR.P 2    => NEVER RUNS REGARDLESS OF WHAT HAPPENS IN SCRIPT 1
+                       (SEE EXAMPLE 2)
+    
 
   5. Dependent scripts
 
-    ```text
+    
     SCRIPT 1:
-    IF 0: TR.P 1    => do nothing
-    SCRIPT 2        => will pulse output 2
+    IF 0: TR.P 1    => DO NOTHING
+    SCRIPT 2        => WILL PULSE OUTPUT 2
 
     SCRIPT 2:
-    ELSE: TR.P 2    => will not pulse output 2 if called directly,
-                       but will if called from script 1
-    ```
+    ELSE: TR.P 2    => WILL NOT PULSE OUTPUT 2 IF CALLED DIRECTLY,
+                       BUT WILL IF CALLED FROM SCRIPT 1
+    
 """
 
 [ELIF]
@@ -71,8 +71,8 @@ Run the command sequentially with `I` values from `x` to `y`.
 For example:
 
 ```
-L 1 4: TR.PULSE I   => pulse outputs 1, 2, 3 and 4
-L 4 1: TR.PULSE I   => pulse outputs 4, 3, 2 and 1
+L 1 4: TR.PULSE I   => PULSE OUTPUTS 1, 2, 3 AND 4
+L 4 1: TR.PULSE I   => PULSE OUTPUTS 4, 3, 2 AND 1
 ```
 """
 
@@ -172,7 +172,7 @@ There is a limit of 8 for the maximum number of nested calls to `SCRIPT` to stop
 prototype = "SCRIPT.POL x"
 prototype_set = "SCRIPT.POL x p"
 aliases = ["$.POL"]
-short = "get script x trigger polarity, or set polarity p (1 rising edge, 2 falling, 3 both)"
+short = "get script `x` trigger polarity, or set polarity `p` (1 rising edge, 2 falling, 3 both)"
 description = """
 Get or set the trigger polarity of script `x`, determining which trigger edges the script will fire on.
 
@@ -182,8 +182,8 @@ Get or set the trigger polarity of script `x`, determining which trigger edges t
 """
 
 ["$F"]
-prototype = "$F script"
-short = "execute script as a function"
+prototype = "$F s"
+short = "execute script `s` as a function"
 description = """
 This op will execute a script similarly to `SCRIPT` op but it will also return a value,
 which means you can define a script that calculates something and then use it in an expression.
@@ -203,8 +203,8 @@ If you need to be able to pass parameters into your function, use `$F1` or `$F2`
 """
 
 ["$F1"]
-prototype = "$F1 script param"
-short = "execute script as a function with 1 parameter"
+prototype = "$F1 s p"
+short = "execute script `s` as a function with 1 parameter `p`"
 description = """
 Same as `$F` but you can also pass a single parameter into the function. Inside the function
 script you can get the parameter using `I1` op.
@@ -216,8 +216,8 @@ See the description of `$F` op for more details on executing scripts as function
 """
 
 ["$F2"]
-prototype = "$F2 script param1 param2"
-short = "execute script as a function with 2 parameters"
+prototype = "$F2 s p1 p2"
+short = "execute script `s` as a function with 2 parameters"
 description = """
 Same as `$F` but you can also pass two parameters into a function. Inside the function script
 you can get them using `I1` and `I2` ops.
@@ -231,8 +231,8 @@ See the description of `$F` op for more details on executing scripts as function
 """
 
 ["$L"]
-prototype = "$L script line"
-short = "execute script line"
+prototype = "$L s l"
+short = "execute script `s` line `l`"
 description = """
 This op executes the specified script line. This allows you to use a script as a library of sorts,
 where each line does something different, so you can use the same script for multiple purposes.
@@ -261,24 +261,24 @@ a line within the same script.
 """
 
 ["$L1"]
-prototype = "$L1 script line param"
-short = "execute script line as a function with 1 parameter"
+prototype = "$L1 s l p"
+short = "execute script `s` line `l` as a function with 1 parameter `p`"
 description = """
 Execute the specified script line as a function that takes 1 parameter. See the description of
 `$L` and `$F1` ops for more details.
 """
 
 ["$L2"]
-prototype = "$L2 script line param1 param2"
-short = "execute script line as a function with 2 parameters"
+prototype = "$L2 s l p1 p2"
+short = "execute script `s` line `l` as a function with 2 parameters"
 description = """
 Execute the specified script line as a function that takes 2 parameters. See the description of
 `$L` and `$F2` ops for more details.
 """
 
 ["$S"]
-prototype = "$S line"
-short = "execute script line within the same script as a function"
+prototype = "$S l"
+short = "execute line `l` within the same script as a function"
 description = """
 This is exactly the same as `$L $ line` but saves you space on not having to specify the script
 number if the line you want to execute is within the same script.
@@ -287,8 +287,8 @@ See the description of `$L` for more details.
 """
 
 ["$S1"]
-prototype = "$S1 line param"
-short = "execute script line within the same script as a function with 1 parameter"
+prototype = "$S1 l p"
+short = "execute line `l` within the same script as a function with 1 parameter `p`"
 description = """
 This is exactly the same as `$L1 $ line param` but saves you space on not having to specify
 the script number if the line you want to execute is within the same script.
@@ -297,8 +297,8 @@ See the description of `$L1` for more details.
 """
 
 ["$S2"]
-prototype = "$S2 line param1 param2"
-short = "execute script line within the same script as a function with 2 parameters"
+prototype = "$S2 l p1 p2"
+short = "execute line `l` within the same script as a function with 2 parameters"
 description = """
 This is exactly the same as `$L2 $ line param1 param2` but saves you space on not having
 to specify the script number if the line you want to execute is within the same script.

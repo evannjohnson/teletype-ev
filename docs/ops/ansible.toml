@@ -5,11 +5,11 @@ short = "get grid LED buffer at position `x`, `y`"
 ["ANS.G"]
 prototype = "ANS.G x y"
 prototype_set = "ANS.G x y z"
-short = "get/set grid key on/off state (`z`) at position `x`, `y`"
+short = "get/set grid key on/off state ( `z` ) at position `x`, `y`"
 
 ["ANS.G.P"]
 prototype = "ANS.G.P x y"
-short = "simulate grid key press at position (`x`, `y`)"
+short = "simulate grid key press at position ( `x`, `y` )"
 
 ["ANS.A.LED"]
 prototype = "ANS.A.LED n x"
@@ -97,7 +97,7 @@ short = "get the current CV value for channel `x`"
 ["KR.MUTE"]
 prototype = "KR.MUTE x"
 prototype_set = "KR.MUTE x y"
-short = "get/set mute state for channel `x` (`1` = muted, `0` = unmuted)"
+short = "get/set mute state for channel `x` ( 1 = muted, 0 = unmuted )"
 
 ["KR.TMUTE"]
 prototype = "KR.TMUTE x"
@@ -114,16 +114,16 @@ short = "get/set the active page"
 description = """
 Get or change the current parameter page. Numbering:
 
- - `0` = trigger
- - `1` = ratchet
- - `2` = note
- - `3` = alt note
- - `4` = octave
- - `5` = glide
- - `6` = duration
- - `7` = TBD
- - `8` = scale
- - `9` = pattern
+ - 0 = trigger
+ - 1 = ratchet
+ - 2 = note
+ - 3 = alt note
+ - 4 = octave
+ - 5 = glide
+ - 6 = duration
+ - 7 = TBD
+ - 8 = scale
+ - 9 = pattern
 """
 
 ["KR.CUE"]
@@ -164,11 +164,11 @@ short = "get/set internal clock period"
 
 ["ME.STOP"]
 prototype = "ME.STOP x"
-short = "stop channel `x` (`0` = all)"
+short = "stop channel `x` ( 0 = all )"
 
 ["ME.RES"]
 prototype = "ME.RES x"
-short = "reset channel `x` (`0` = all), also used as \"start\""
+short = "reset channel `x` ( 0 = all ), also used as \"start\""
 
 ["ME.CV"]
 prototype = "ME.CV x"
@@ -181,7 +181,7 @@ short = "return current preset / load preset `x`"
 
 ["LV.RES"]
 prototype = "LV.RES x"
-short = "reset, `0` for soft reset (on next ext. clock), `1` for hard reset"
+short = "reset, 0 for soft reset (on next ext. clock), 1 for hard reset"
 
 ["LV.POS"]
 prototype = "LV.POS"
@@ -214,16 +214,16 @@ short = "return current preset / load preset `x`"
 
 ["CY.RES"]
 prototype = "CY.RES x"
-short = "reset channel `x` (`0` = all)"
+short = "reset channel `x` ( 0 = all )"
 
 ["CY.POS"]
 prototype = "CY.POS x"
 prototype_set = "CY.POS x y"
-short = "get / set position of channel `x` (`x = 0` to set all), position between `0-255`"
+short = "get / set position of channel `x` ( `x` = 0 to set all ), position between 0-255"
 
 ["CY.REV"]
 prototype = "CY.REV x"
-short = "reverse channel `x` (`0` = all)"
+short = "reverse channel `x` ( 0 = all )"
 
 ["CY.CV"]
 prototype = "CY.CV x"
@@ -239,7 +239,7 @@ short = "shift pitch CV by standard Teletype pitch value (e.g. `N 6`, `V -1`, et
 
 ["ARP.HLD"]
 prototype = "ARP.HLD h"
-short = "`0` disables key hold mode, other values enable"
+short = "0 disables key hold mode, other values enable"
 
 ["ARP.STY"]
 prototype = "ARP.STY y"

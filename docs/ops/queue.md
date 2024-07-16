@@ -15,18 +15,18 @@ Most operators manipulates the elements up to (and including) length. Exceptions
 Examples, only first 8 elements shown for clarity:
 By default all elements of the queue have a value of `0` and the length is set to 1.
 ```
-Q.N "length" ->|
-element nb: 1  |  2 3 4 5 6 7 8 
-value       0  |  0 0 0 0 0 0 0
+Q.N "LENGTH" -> |
+ELEMENT NB: 1  |  2 3 4 5 6 7 8 
+VALUE       0  |  0 0 0 0 0 0 0
 ```
 
 Using the Q OP will add values to the beginning of the queue and push the other elements to the right.
-`Q 1`
 ```
+Q 1
 1  |  0 0 0 0 0 0 0
 
-Q 2 // add 2 to queue
-Q 3 // add 3 to queue
+Q 2 // ADD 2 TO QUEUE
+Q 3 // ADD 3 TO QUEUE
 
 3  |  2 1 0 0 0 0 0
 ```
@@ -34,7 +34,7 @@ Q 3 // add 3 to queue
 Using the `Q` getter OP will return the last element in the queue, but not modify content or the state of the queue.
 
 ```
-Q // will return 3
+Q // WILL RETURN 3
 
 3  |  2 1 0 0 0 0 0
 ```
@@ -42,7 +42,7 @@ Q // will return 3
 Using the `Q.N` OP will either return the position of the end marker (1-indexed) or move it:
 
 ```
-Q.N 2 // increace the length to two by moving the end marker:
+Q.N 2 // set the length to 2 by moving the end marker:
 
 3 2  |  1 0 0 0 0 0
 
@@ -52,11 +52,11 @@ Q // get the value at the end, now `2`
 By default grow is disabled, but it can be turned on with `Q.GRW 1`. With grow enabled, the queue will automatically expand when new elements are added with `Q x` and likewise shrink when reading with `Q`.
 
 ```
-Q.GRW // enable grow
+Q.GRW // ENABLE GROW
 3 2  |  1 0 0 0 0 0
-Q 4 // add to to queue
+Q 4 // ADD TO TO QUEUE
 4 3 2  |  1 0 0 0 0
-Q // read element from queue, will return 2
+Q // READ ELEMENT FROM QUEUE, WILL RETURN 2
 4 3  |  2 1 0 0 0 0
 ```
 

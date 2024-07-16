@@ -4,7 +4,7 @@ short = "milliseconds per beat in BPM `x`"
 
 ["DR.P"]
 prototype = "DR.P b p s"
-short = "Drum pattern helper, `b` is the drum bank (`0-4`), `p` is the pattern (0-215) and step is the step number (0-15), returns `0` or `1`"
+short = "Drum pattern helper, `b` is the drum bank (0-4), `p` is the pattern (0-215) and step is the step number (0-15), returns 0 or 1"
 description = """
 The drum helper uses preset drum patterns to give 16-step gate patterns. Gates wrap after step 16. Bank 0 is a set of pseudo random gates increasing in density at higher numbered patterns, where pattern 0 is empty,
 and pattern 215 is 1s. Bank 1 is bass drum patterns. Bank 2 is snare drum patterns. Bank 3 is closed hi-hats. Bank 4 is open hi-hits and in some cases cymbals. Bank 1-4 patterns are related to each other (bank 1 pattern 1's bass drum pattern fits bank 2 pattern 1's snare drum pattern). 
@@ -13,7 +13,7 @@ The patterns are from [Paul Wenzel's "Pocket Operations" book](https://shittyrec
 
 ["DR.T"]
 prototype = "DR.T b p q l s"
-short = "Tresillo helper, `b` is the drum bank (`0-4`), `p` is first pattern (0-215), `q` is the second pattern (0-215), `l` is length (`1-64`), and step is the step number (0-length-1), returns `0` or `1`"
+short = "Tresillo helper, `b` is the drum bank (0-4), `p` is first pattern (0-215), `q` is the second pattern (0-215), `l` is length (1-64), and step is the step number (0-length-1), returns 0 or 1"
 description = """
 The Tresillo helper uses the preset drum patterns described in the drum pattern help function in a 3, 3, 2 rythmic formation. In the tresillo, pattern 1 will be repeated twice for a number of steps determined by the overall length of the pattern. A pattern of length 8 will play the first three steps of your selected pattern 1 twice, and
 the first two steps of pattern 2 once. A pattern length of 16 will play the first six steps of selected pattern 1 twice, and the first four steps of pattern 2 once. And so on. The max length is 64. Length will be rounded down to the nearest multiple of 8. The step number wraps at the given length.
@@ -28,12 +28,12 @@ The velocity helper gives velocity values (0-16383) at each step. The values are
 
 [ER]
 prototype = "ER f l i"
-short = "Euclidean rhythm, `f` is fill (`1-32`), `l` is length (`1-32`) and `i` is step (any value), returns `0` or `1`"
+short = "Euclidean rhythm, `f` is fill (1-32), `l` is length (1-32) and `i` is step (any value), returns 0 or 1"
 description="""
 Euclidean rhythm helper, as described by Godfried Toussaint in his 2005 paper ["The Euclidean Algorithm Generates Traditional Musical Rhythms"][euclidean_rhythm_paper][^euclidean_rhythm_citation]. From the abstract:
 
- - `f` is fill (`1-32`) and should be less then or equal to length
- - `l` is length (`1-32`)
+ - `f` is fill (1-32) and should be less then or equal to length
+ - `l` is length (1-32)
  - `i` is the step index, and will work with negative as well as positive numbers
 
 If you wish to add rotation as well, use the following form:
@@ -53,7 +53,7 @@ For more info, see the post on [samdoshi.com][samdoshi_com_euclidean]
 
 [NR]
 prototype = "NR p m f s"
-short = "Numeric Repeater, `p` is prime pattern (`0-31`), `m` is & mask (`0-3`), `f` is variation factor (`0-16`) and `s` is step (`0-15`), returns `0` or `1`"
+short = "Numeric Repeater, `p` is prime pattern (0-31), `m` is & mask (0-3), `f` is variation factor (0-16) and `s` is step (0-15), returns 0 or 1"
 description = """
 Numeric Repeater is similar to ER, except it generates patterns using the binary arithmetic process found in ["Noise Engineering's Numeric Repetitor"][numeric_repetitor]. From the description:
 
@@ -62,10 +62,10 @@ Numeric Repetitor is a rhythmic gate generator based on binary arithmetic. A cor
 All parameters wrap around their specified ranges automatically and support negative indexing.
 
 Masks
- - `0` is no mask
- - `1` is `0x0F0F`
- - `2` is `0xF003`
- - `3` is `0x1F0`
+ - 0 is no mask
+ - 1 is 0x0F0F
+ - 2 is 0xF003
+ - 3 is 0x1F0
 
 For further detail ["see the manual"][nr_manual].
 

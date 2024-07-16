@@ -1,7 +1,7 @@
 [RAND]
 prototype = "RAND x"
 aliases = ["RND"]
-short = "generate a random number between `0` and `x` inclusive"
+short = "generate a random number between 0 and `x` inclusive"
 
 [RRAND]
 prototype = "RRAND x y"
@@ -10,7 +10,7 @@ short = "generate a random number between `x` and `y` inclusive"
 
 [TOSS]
 prototype = "TOSS"
-short = "randomly return `0` or `1`"
+short = "randomly return 0 or 1"
 
 [R]
 prototype = "R"
@@ -40,10 +40,10 @@ short = "get or set the algorithm for the `CHAOS` generator. 0 = LOGISTIC, 1 = C
 [DRUNK]
 prototype = "DRUNK"
 prototype_set = "DRUNK x"
-short = """changes by `-1`, `0`, or `1` upon each read saving its state,
+short = """changes by -1, 0, or 1 upon each read saving its state,
 setting will give it a new value for the next read"""
 description="""
-Changes by `-1`, `0`, or `1` upon each read, saving its state. Setting `DRUNK`
+Changes by -1, 0, or 1 upon each read, saving its state. Setting `DRUNK`
 will give it a new value for the next read, and drunkedness will continue on
 from there with subsequent reads.
 
@@ -55,17 +55,17 @@ wrap around when it reaches it's bounds.
 ["DRUNK.MIN"]
 prototype = "DRUNK.MIN"
 prototype_set = "DRUNK.MIN x"
-short = "set the lower bound for `DRUNK`, default `0`"
+short = "set the lower bound for `DRUNK`, default 0"
 
 ["DRUNK.MAX"]
 prototype = "DRUNK.MAX"
 prototype_set = "DRUNK.MAX x"
-short = "set the upper bound for `DRUNK`, default `255`"
+short = "set the upper bound for `DRUNK`, default 255"
 
 ["DRUNK.WRAP"]
 prototype = "DRUNK.WRAP"
 prototype_set = "DRUNK.WRAP x"
-short = "should `DRUNK` wrap around when it reaches it's bounds, default `0`"
+short = "should `DRUNK` wrap around when it reaches it's bounds, default 0"
 
 ["SEED"]
 prototype = "SEED"

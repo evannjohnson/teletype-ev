@@ -11,12 +11,12 @@ mainfontoptions:
 - BoldFont=Roboto-Bold.ttf
 - ItalicFont=Roboto-Italic.ttf
 - BoldItalicFont=Roboto-BoldItalic.ttf
-monofont: RobotoMono-Regular.ttf
+monofont: liquid-bigspace.ttf
 monofontoptions:
-- Path={{fonts_dir}}/roboto-mono/
-- BoldFont=RobotoMono-Bold.ttf
-- ItalicFont=RobotoMono-Italic.ttf
-- BoldItalicFont=RobotoMono-BoldItalic.ttf
+- Path={{fonts_dir}}/liquid/
+- BoldFont=liquid-bigspace.ttf
+- ItalicFont=liquid-bigspace.ttf
+- BoldItalicFont=liquid-bigspace.ttf
 header-includes:
 - \usepackage{titlesec}
 - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
@@ -24,4 +24,6 @@ header-includes:
 - \usepackage{etoolbox}
 - \AtBeginEnvironment{longtable}{\small}{}{}
 - \renewcommand\arraystretch{1.3}
+- \usepackage{needspace}
+- \titleformat{\section}{\needspace{0.5\textheight}\normalfont\large\bfseries}{\thesection}{1em}{}
 ---

@@ -139,13 +139,13 @@ Patterns are stored in flash with each scene!
 
 Editing patterns with scripts or from the command line isn't always ergonomic. When you'd like to visually edit patterns, TRACKER mode is the way.
 
-The `TAB` key cycles between LIVE, EDIT and TRACKER mode.  You can also get directly to TRACKER mode by pressing the `NUM LOCK` key.  TRACKER mode is the one with 4 columns of numbers on the Teletype screen.
+The TAB key cycles between LIVE, EDIT and TRACKER mode.  You can also get directly to TRACKER mode by pressing the NUM LOCK key.  TRACKER mode is the one with 4 columns of numbers on the Teletype screen.
 
 The current pattern memory is displayed in these columns. Use the arrow keys to navigate. Holding ALT will jump by pages.
 
 The edit position is indicated by the brightest number. Very dim numbers indicate they are outside the pattern length.
 
-Use the square bracket keys `[` and `]` to decrease/increase the values. Backspace sets the value to 0. Entering numbers will overwrite a new value. You can cut/copy/paste with ALT-X-C-V.
+Use the square bracket keys ([ and ]) to decrease/increase the values. Backspace sets the value to 0. Entering numbers will overwrite a new value. You can cut/copy/paste with ALT-X-C-V.
 
 Check the *Keys* section for a complete list of tracker shortcuts.
 
@@ -154,17 +154,17 @@ Check the *Keys* section for a complete list of tracker shortcuts.
 
 A *SCENE* is a complete set of scripts and patterns. Stored in flash, scenes can be saved between sessions. Many scenes ship as examples. On startup, the last used scene is loaded by Teletype.
 
-Access the SCENE menu using `ESCAPE`. The bracket keys (`[` and `]`) navigate between the scenes. Use the up/down arrow keys to read the scene *text*. This text will/should describe what the scene does generally along with input/output functions. `ENTER` will load the selected scene, or `ESCAPE` to abort.
+Access the SCENE menu using ESCAPE. The bracket keys ([ and ]) navigate between the scenes. Use the up/down arrow keys to read the scene *text*. This text will/should describe what the scene does generally along with input/output functions. ENTER will load the selected scene, or ESCAPE to abort.
 
-To save a scene, hold `ALT` while pushing `ESCAPE`. Use the brackets to select the destination save position. Edit the text section as usual-- you can scroll down for many lines. The top line is the name of the scene. `ALT-ENTER` will save the scene to flash.
+To save a scene, hold ALT while pushing ESCAPE. Use the brackets to select the destination save position. Edit the text section as usual-- you can scroll down for many lines. The top line is the name of the scene. ALT-ENTER will save the scene to flash.
 
 ### Keyboard-less Scene Recall
 
 To facilitate performance without the need for the keyboard, scenes can be recalled directly from the module's front panel.
 
-* Press the `SCENE RECALL` button next to the USB jack on the panel.
-* Use the `PARAM` knob to highlight your desired preset.
-* Hold the `SCENE RECALL` button for 1 second to load the selected scene.
+* Press the *SCENE RECALL* button next to the USB jack on the panel.
+* Use the *PARAM* knob to highlight your desired preset.
+* Hold the *SCENE RECALL* button for 1 second to load the selected scene.
 
 ### Init Script
 
@@ -174,19 +174,17 @@ The *INIT* script (represented as `I`) is executed when a preset is recalled. Th
 
 Teletype's scenes can be saved and loaded from a USB flash drive. When a flash
 drive is inserted, Teletype will recognize it and go into disk mode. First,
-all 32 scenes will be written to text files on the drive with names of the form `tt##s.txt`. For example, scene 5 will be saved to `tt05s.txt`. The screen will display `WRITE.......` as this is done.
+all 32 scenes will be written to text files on the drive with names of the form 'tt##s.txt'. For example, scene 5 will be saved to 'tt05s.txt'. The screen will display `WRITE.......` as this is done.
 
-Once complete, Teletype will attempt to read any files named `tt##.txt` and load them into
-memory. For example, a file named `tt13.txt` would be loaded as scene 13 on
+Once complete, Teletype will attempt to read any files named 'tt##.txt' and load them into
+memory. For example, a file named 'tt13.txt' would be loaded as scene 13 on
 Teletype. The screen will display `READ......` Once this process is complete, Teletype will return to LIVE mode and the drive can be safely removed.
 
 For best results, use an FAT-formatted USB flash drive. If Teletype does not
 recognize a disk that is inserted within a few seconds, it may be best to try another.
 
-An
-example of possible scenes to load, as well as the set of factory default scenes, can be
-found at the [Teletype
-Codex](https://github.com/monome-community/teletype-codex).
+An example of possible scenes to load, as well as the set of factory default scenes, can
+be found at the [Teletype Codex](https://github.com/monome-community/teletype-codex).
 
 ## Commands
 
@@ -228,10 +226,10 @@ Here `ADD` needs two arguments, and gets 1 and 2. `X` is assigned the result of 
 
 If a value is returned at the end of a command, it is printed as a MESSAGE. This is visible in LIVE mode just above the command prompt. (In the examples below ignore the // comments).
 
-    8           // prints 8
+    8           // PRINTS 8
     X 4
-    X           // prints 4
-    ADD 8 32    // prints 40
+    X           // PRINTS 4
+    ADD 8 32    // PRINTS 40
 
 Many parameters are indexed, such as CV and TR. This means that CV and TR have multiple values (in this case, each has four.) We pass an extra argument to specify which index we want to read or write.
 
@@ -239,11 +237,11 @@ Many parameters are indexed, such as CV and TR. This means that CV and TR have m
 
 Here CV 1 is set to 0. You can leave off the 0 to print the value.
 
-    CV 1        // prints value of CV 1
+    CV 1        // PRINTS VALUE OF CV 1
 
 Or, this works too:
 
-    X CV 1      // set X to current value of CV 1
+    X CV 1      // SET X TO CURRENT VALUE OF CV 1
 
 Here is an example of using an operator `RAND` to set a random voltage:
 

@@ -1,15 +1,15 @@
 ["P.N"]
 prototype = "P.N"
 prototype_set = "P.N x"
-short = "get/set the pattern number for the working pattern, default `0`"
-description = "get/set the pattern number for the working pattern, default `0`. All `P` ops refer to this pattern."
+short = "get/set the pattern number for the working pattern, default 0"
+description = "get/set the pattern number for the working pattern, default 0. All `P` ops refer to this pattern."
 
 [P]
 prototype = "P x"
 prototype_set = "P x y"
 short = "get/set the value of the working pattern at index `x`"
 
-description = """get/set the value of the working pattern at index `x`. All positive values (`0-63`) can be set or returned while index values greater than 63 clip to 63. Negative `x` values are indexed backwards from the end of the pattern length of the working pattern.
+description = """get/set the value of the working pattern at index `x`. All positive values (0-63) can be set or returned while index values greater than 63 clip to 63. Negative `x` values are indexed backwards from the end of the pattern length of the working pattern.
 
 Example:
 
@@ -42,9 +42,9 @@ short = "get/set pattern length of pattern x. non-destructive to data"
 ["P.WRAP"]
 prototype = "P.WRAP"
 prototype_set = "P.WRAP x"
-short = "when the working pattern reaches its bounds does it wrap (`0/1`), default `1` (enabled)"
+short = "when the working pattern reaches its bounds does it wrap (0/1), default 1 (enabled)"
 
-description = """when the working pattern reaches its bounds does it wrap (`0/1`). With `PN.WRAP` enabled (`1`), when an index reaches its upper or lower bound using `P.NEXT` or `P.PREV` it will wrap to the other end of the pattern and you can continue advancing. The bounds of P.WRAP are defined through `P.L`, `P.START`, and `P.END`.
+description = """when the working pattern reaches its bounds does it wrap (0/1). With `PN.WRAP` enabled (1), when an index reaches its upper or lower bound using `P.NEXT` or `P.PREV` it will wrap to the other end of the pattern and you can continue advancing. The bounds of P.WRAP are defined through `P.L`, `P.START`, and `P.END`.
 
 If wrap is enabled (`P.WRAP 1`) a pattern will begin at its start location and advance to the lesser index of either its end location or the end of its pattern length
 
@@ -54,43 +54,43 @@ With wrap enabled, a pattern length of 6, a start location of 2 , and an end loc
 
 `P.WRAP 1; P.L 6; P.START 2; P.END 8`
 
-The pattern will wrap between the indexes `2` and `5`.
+The pattern will wrap between the indexes 2 and 5.
 
 With wrap enabled, a pattern length of 10, a start location of 3, and an end location of 6.
 
 `P.WRAP 1; P.L 10; P.START 3; P.END 6`
 
-The pattern will wrap between the indexes `3` and `6`.
+The pattern will wrap between the indexes 3 and 6.
 
 If wrap is disabled (`P.WRAP 0`) a pattern will run between its start and end locations and halt at either bound.
 
-This applies to `PN.WRAP` as well, except the pattern number is the first variable and a second variable specifies the wrap behavior (`0/1`).
+This applies to `PN.WRAP` as well, except the pattern number is the first variable and a second variable specifies the wrap behavior (0/1).
 """
 
 ["PN.WRAP"]
 prototype = "PN.WRAP x"
 prototype_set = "PN.WRAP x y"
-short = "when pattern `x` reaches its bounds does it wrap (`0/1`), default `1` (enabled)"
+short = "when pattern `x` reaches its bounds does it wrap (0/1), default 1 (enabled)"
 
 ["P.START"]
 prototype = "P.START"
 prototype_set = "P.START x"
-short = "get/set the start location of the working pattern, default `0`"
+short = "get/set the start location of the working pattern, default 0"
 
 ["PN.START"]
 prototype = "PN.START x"
 prototype_set =  "PN.START x y"
-short = "get/set the start location of pattern `x`, default `0`"
+short = "get/set the start location of pattern `x`, default 0"
 
 ["P.END"]
 prototype = "P.END"
 prototype_set = "P.END x"
-short = "get/set the end location of the working pattern, default `63`"
+short = "get/set the end location of the working pattern, default 63"
 
 ["PN.END"]
 prototype = "PN.END x"
 prototype_set = "PN.END x y"
-short = "get/set the end location of the pattern `x`, default `63`"
+short = "get/set the end location of the pattern `x`, default 63"
 
 ["P.I"]
 prototype = "P.I"
@@ -101,19 +101,19 @@ get/set index position for the working pattern. all values greater than pattern 
 
 Example:
 
-With a pattern length of `6` (`P.L 6`), yielding an index range of `0-5`:
+With a pattern length of 6 (`P.L 6`), yielding an index range of 0-5:
 
 `P.I 3`
 
-moves the index of the working pattern to `3`
+moves the index of the working pattern to 3
 
 `P.I 10`
 
-moves the index of the working pattern to `6`
+moves the index of the working pattern to 6
 
 `P.I -2`
 
-moves the index of the working pattern to `4`
+moves the index of the working pattern to 4
 
 This applies to `PN.I`, except the pattern number is the first variable and a second variable specifics the index.
 """

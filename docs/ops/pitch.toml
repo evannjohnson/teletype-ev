@@ -8,74 +8,105 @@ short = "just intonation helper, precision ratio divider normalised to 1V"
 
 [N]
 prototype = "N x"
-short = "converts an equal temperament note number to a value usable by the CV outputs (`x` in the range `-127` to `127`)"
+short = "converts an equal temperament note number to a value usable by the CV outputs (`x` in the range -127 to 127)"
 description = """
 The `N` OP converts an equal temperament note number to a value usable by the CV outputs.
 
 Examples:
 
 ```
-CV 1 N 60        => set CV 1 to middle C, i.e. 5V
-CV 1 N RAND 24   => set CV 1 to a random note from the lowest 2 octaves
+CV 1 N 60        => SET CV 1 TO MIDDLE C, I.E. 5V
+CV 1 N RAND 24   => SET CV 1 TO A RANDOM NOTE FROM THE LOWEST 2 OCTAVES
 ```
 """
 
 ["N.S"]
 prototype = "N.S r s d"
-short = "Note Scale operator, `r` is the root note (`0-127`), `s` is the scale (`0-8`) and `d` is the degree (`1-7`), returns a value from the `N` table."
+short = "Note Scale operator, `r` is the root note (0-127), `s` is the scale (0-8) and `d` is the degree (1-7), returns a value from the `N` table."
 description = """
 The `N.S` OP lets you retrieve `N` table values according to traditional western scales. `s` and `d` wrap to their ranges automatically and support negative indexing.
 
 Scales
- - `0` = Major
- - `1` = Natural Minor
- - `2` = Harmonic Minor
- - `3` = Melodic Minor
- - `4` = Dorian
- - `5` = Phrygian
- - `6` = Lydian
- - `7` = Mixolydian
- - `8` = Locrian
+
+- 0 = Major
+
+- 1 = Natural Minor
+
+- 2 = Harmonic Minor
+
+- 3 = Melodic Minor
+
+- 4 = Dorian
+
+- 5 = Phrygian
+
+- 6 = Lydian
+
+- 7 = Mixolydian
+
+- 8 = Locrian
 """
 
 ["N.C"]
 prototype = "N.C r c d"
-short = "Note Chord operator, `r` is the root note (`0-127`), `c` is the chord (`0-12`) and `d` is the degree (`0-3`), returns a value from the `N` table."
+short = "Note Chord operator, `r` is the root note (0-127), `c` is the chord (0-12) and `d` is the degree (0-3), returns a value from the `N` table."
 description = """
 The `N.C` OP lets you retrieve `N` table values according to traditional western chords. `c` and `d` wrap to their ranges automatically and support negative indexing.
 
 Chords
- - `0` = Major 7th `{0, 4, 7, 11}`
- - `1` = Minor 7th `{0, 3, 7, 10}`
- - `2` = Dominant 7th `{0, 4, 7, 10}`
- - `3` = Diminished 7th `{0, 3, 6, 9}`
- - `4` = Augmented 7th `{0, 4, 8, 10}`
- - `5` = Dominant 7b5 `{0, 4, 6, 10}`
- - `6` = Minor 7b5 `{0, 3, 6, 10}`
- - `7` = Major 7#5 `{0, 4, 8, 11}`
- - `8` = Minor Major 7th `{0, 3, 7, 11}`
- - `9` = Diminished Major 7th `{0, 3, 6, 11}`
- - `10` = Major 6th `{0, 4, 7, 9}`
- - `11` = Minor 6th `{0, 3, 7, 9}`
- - `12` = 7sus4 `{0, 5, 7, 10}`
+
+- 0 = Major 7th {0, 4, 7, 11}
+
+- 1 = Minor 7th {0, 3, 7, 10}
+
+- 2 = Dominant 7th {0, 4, 7, 10}
+
+- 3 = Diminished 7th {0, 3, 6, 9}
+
+- 4 = Augmented 7th {0, 4, 8, 10}
+
+- 5 = Dominant 7b5 {0, 4, 6, 10}
+
+- 6 = Minor 7b5 {0, 3, 6, 10}
+
+- 7 = Major 7#5 {0, 4, 8, 11}
+
+- 8 = Minor Major 7th {0, 3, 7, 11}
+
+- 9 = Diminished Major 7th {0, 3, 6, 11}
+
+- 10 = Major 6th {0, 4, 7, 9}
+
+- 11 = Minor 6th {0, 3, 7, 9}
+
+- 12 = 7sus4 {0, 5, 7, 10}
  """
  
 ["N.CS"]
 prototype = "N.CS r s d c"
-short = "Note Chord Scale operator, `r` is the root note (`0-127`), `s` is the scale (`0-8`), `d` is the scale degree (`1-7`) and `c` is the chord component (`0-3`), returns a value from the `N` table."
+short = "Note Chord Scale operator, `r` is the root note (0-127), `s` is the scale (0-8), `d` is the scale degree (1-7) and `c` is the chord component (0-3), returns a value from the `N` table."
 description = """
 The `N.CS` OP lets you retrieve `N` table values according to traditional western scales and chords. `s`, `c` and `d` wrap to their ranges automatically and support negative indexing.
 
 Chord Scales - Refer to chord indices in `N.C` OP
- - `0` = Major `{0, 1, 1, 0, 2, 1, 6}`
- - `1` = Natural Minor `{1, 6, 0, 1, 1, 0, 2}`
- - `2` = Harmonic Minor `{8, 6, 7, 1, 2, 0, 3}`
- - `3` = Melodic Minor `{8, 1, 7, 2, 2, 6, 6}`
- - `4` = Dorian `{1, 1, 0, 2, 1, 6, 0}`
- - `5` = Phrygian `{1, 0, 2, 1, 6, 0, 1}`
- - `6` = Lydian `{0, 2, 1, 6, 0, 1, 1}`
- - `7` = Mixolydian `{2, 1, 6, 0, 1, 1, 0}`
- - `8` = Locrian `{6, 0, 1, 1, 0, 2, 1}`
+
+- 0 = Major {0, 1, 1, 0, 2, 1, 6}
+
+- 1 = Natural Minor {1, 6, 0, 1, 1, 0, 2}
+
+- 2 = Harmonic Minor {8, 6, 7, 1, 2, 0, 3}
+
+- 3 = Melodic Minor {8, 1, 7, 2, 2, 6, 6}
+
+- 4 = Dorian {1, 1, 0, 2, 1, 6, 0}
+
+- 5 = Phrygian {1, 0, 2, 1, 6, 0, 1}
+
+- 6 = Lydian {0, 2, 1, 6, 0, 1, 1}
+
+- 7 = Mixolydian {2, 1, 6, 0, 1, 1, 0}
+
+- 8 = Locrian {6, 0, 1, 1, 0, 2, 1}
  """
 
 ["N.B"]
@@ -92,42 +123,60 @@ Note that N.B is using scale at index 0 as used by N.BX ,so N.B and N.BX 0 are e
 
 Examples:
 ```
-CV 1 N.B 1            ==>  set CV 1 to 1st degree of default scale
-                           (C, value corresponding to N 0)
-N.B 0 R101011010101   ==>  set scale to C-major (default)
-CV 1 N.B 1            ==>  set CV 1 get 1st degree of scale
-                           (C, value corresponding to N 0)
-N.B 2 R101011010101   ==>  set scale to D-major
-CV 1 N.B 3            ==>  set CV 1 to 3rd degree of scale
-                           (F#, value corresponding to N 6)
-N.B 3 R100101010010   ==>  set scale to Eb-minor pentatonic
-CV 1 N.B 2            ==>  set CV 1 to 2nd degree of scale 
-                           (Gb, value corresponding to N 6)
-N.B 5 -3              ==>  set scale to F-lydian using preset
+CV 1 N.B 1            ==>  SET CV 1 TO 1ST DEGREE OF DEFAULT SCALE
+                           (C, VALUE CORRESPONDING TO N 0)
+N.B 0 R101011010101   ==>  SET SCALE TO C-MAJOR (DEFAULT)
+CV 1 N.B 1            ==>  SET CV 1 GET 1ST DEGREE OF SCALE
+                           (C, VALUE CORRESPONDING TO N 0)
+N.B 2 R101011010101   ==>  SET SCALE TO D-MAJOR
+CV 1 N.B 3            ==>  SET CV 1 TO 3RD DEGREE OF SCALE
+                           (F#, VALUE CORRESPONDING TO N 6)
+N.B 3 R100101010010   ==>  SET SCALE TO EB-MINOR PENTATONIC
+CV 1 N.B 2            ==>  SET CV 1 TO 2ND DEGREE OF SCALE 
+                           (GB, VALUE CORRESPONDING TO N 6)
+N.B 5 -3              ==>  SET SCALE TO F-LYDIAN USING PRESET
 ```
 Values of `s` less than 1 sets the bit mask to a preset scale:
-```
-0:   Ionian (major)
--1:  Dorian
--2:  Phrygian
--3:  Lydian
--4:  Mixolydian
--5:  Aeolean (natural minor)
--6:  Locrian
--7:  Melodic minor
--8:  Harmonic minor
--9:  Major pentatonic
--10: Minor pentatonic
--11  Whole note (1st Messiaen mode)
--12  Octatonic (half-whole, 2nd Messiaen mode)
--13  Octatonic (whole-half)
--14  3rd Messiaen mode
--15  4th Messiaen mode
--16  5th Messiaen mode
--17  6th Messiaen mode
--18  7th Messiaen mode
--19  Augmented
-```
+
+- 0:   Ionian (major)
+
+- -1:  Dorian
+
+- -2:  Phrygian
+
+- -3:  Lydian
+
+- -4:  Mixolydian
+
+- -5:  Aeolean (natural minor)
+
+- -6:  Locrian
+
+- -7:  Melodic minor
+
+- -8:  Harmonic minor
+
+- -9:  Major pentatonic
+
+- -10: Minor pentatonic
+
+- -11  Whole note (1st Messiaen mode)
+
+- -12  Octatonic (half-whole, 2nd Messiaen mode)
+
+- -13  Octatonic (whole-half)
+
+- -14  3rd Messiaen mode
+
+- -15  4th Messiaen mode
+
+- -16  5th Messiaen mode
+
+- -17  6th Messiaen mode
+
+- -18  7th Messiaen mode
+
+- -19  Augmented
 """
 
 ["N.BX"]
@@ -139,13 +188,13 @@ Multi-index version of N.B. Index `i` in the range 0-15, allows working with 16 
 
 Examples:
 ```
-N.BX 0 0 R101011010101   ==>  set scale at index 0 to C-major (default)
-CV 1 N.BX 0 1            ==>  set CV 1 to 1st degree of scale
-                              (C, value corresponding to N 0)
-N.BX 1 3 R100101010010   ==>  set scale at index 1 to Eb-minor pentatonic
-CV 1 N.BX 1 2            ==>  set CV 1 to 2nd degree of scale
-                              (Gb, value corresponding to N 6)
-N.BX 2 5 -3              ==>  set scale at index 2 to F-lydian using preset
+N.BX 0 0 R101011010101   ==>  SET SCALE AT INDEX 0 TO C-MAJOR (DEFAULT)
+CV 1 N.BX 0 1            ==>  SET CV 1 TO 1ST DEGREE OF SCALE
+                              (C, VALUE CORRESPONDING TO N 0)
+N.BX 1 3 R100101010010   ==>  SET SCALE AT INDEX 1 TO EB-MINOR PENTATONIC
+CV 1 N.BX 1 2            ==>  SET CV 1 TO 2ND DEGREE OF SCALE
+                              (GB, VALUE CORRESPONDING TO N 6)
+N.BX 2 5 -3              ==>  SET SCALE AT INDEX 2 TO F-LYDIAN USING PRESET
 ```
 
 """
@@ -172,10 +221,15 @@ short = "quantize 1V/OCT signal `x` to chord `c` (1-7) from scale `s` (0-8, refe
 description = """
 Quantize 1V/OCT signal `x` to chord `c` (1-7) from scale `s` (0-8, reference N.S scales) at degree `d` (1-7) with root 1V/OCT pitch `r`.
 
-Chords (1-7)
- - `1` = Tonic
- - `2` = Third
- - `3` = Triad
- - `4` = Seventh
- - etc.
+Chords (1-7):
+
+- 1 = Tonic
+
+- 2 = Third
+
+- 3 = Triad
+
+- 4 = Seventh
+
+- etc.
 """

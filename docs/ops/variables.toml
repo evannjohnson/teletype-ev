@@ -1,27 +1,27 @@
 [A]
 prototype = "A"
 prototype_set = "A x"
-short = "get / set the variable `A`, default `1`"
+short = "get / set the variable `A`, default 1"
 
 [B]
 prototype = "B"
 prototype_set = "B x"
-short = "get / set the variable `B`, default `2`"
+short = "get / set the variable `B`, default 2"
 
 [C]
 prototype = "C"
 prototype_set = "C x"
-short = "get / set the variable `C`, default `3`"
+short = "get / set the variable `C`, default 3"
 
 [D]
 prototype = "D"
 prototype_set = "D x"
-short = "get / set the variable `D`, default `4`"
+short = "get / set the variable `D`, default 4"
 
 [FLIP]
 prototype = "FLIP"
 prototype_set = "FLIP x"
-short = "returns the opposite of its previous state (`0` or `1`) on each read (also settable)"
+short = "returns the opposite of its previous state (0 or 1) on each read (also settable)"
 
 [I]
 prototype = "I"
@@ -56,12 +56,12 @@ a script from another script you can still use and modify `K` without affecting 
 [O]
 prototype = "O"
 prototype_set = "O x"
-short = "auto-increments _after_ each access, can be set, starting value `0`"
+short = "auto-increments _after_ each access, can be set, starting value 0"
 description="""
-Auto-increments by `O.INC` _after_ each access. The initial value is `0`. The
-lower and upper bounds can be set by `O.MIN` (default `0`) and `O.MAX`
-(default `63`). `O.WRAP` controls if the value wraps when it reaches a bound
-(default is `1`).
+Auto-increments by `O.INC` _after_ each access. The initial value is 0. The
+lower and upper bounds can be set by `O.MIN` (default 0) and `O.MAX`
+(default 63). `O.WRAP` controls if the value wraps when it reaches a bound
+(default is 1).
 
 Example:
 
@@ -71,7 +71,7 @@ O           => 1
 X O
 X           => 2
 O.INC 2
-O           => 3 (O increments after it's accessed)
+O           => 3 (O INCREMENTS AFTER IT'S ACCESSED)
 O           => 5
 O.INC -2
 O 2
@@ -85,27 +85,27 @@ O           => 61
 ["O.INC"]
 prototype = "O.INC"
 prototype_set = "O.INC x"
-short = "how much to increment `O` by on each invocation, default `1`"
+short = "how much to increment `O` by on each invocation, default 1"
 
 ["O.MIN"]
 prototype = "O.MIN"
 prototype_set = "O.MIN x"
-short = "the lower bound for `O`, default `0`"
+short = "the lower bound for `O`, default 0"
 
 ["O.MAX"]
 prototype = "O.MAX"
 prototype_set = "O.MAX x"
-short = "the upper bound for `O`, default `63`"
+short = "the upper bound for `O`, default 63"
 
 ["O.WRAP"]
 prototype = "O.WRAP"
 prototype_set = "O.WRAP x"
-short = "should `O` wrap when it reaches its bounds, default `1`"
+short = "should `O` wrap when it reaches its bounds, default 1"
 
 [T]
 prototype = "T"
 prototype_set = "T x"
-short = "get / set the variable `T`, typically used for time, default `0`"
+short = "get / set the variable `T`, typically used for time, default 0"
 
 [TIME]
 prototype = "TIME"
@@ -115,7 +115,7 @@ short = "timer value, counts up in ms., wraps after 32s, can be set"
 ["TIME.ACT"]
 prototype = "TIME.ACT"
 prototype_set = "TIME.ACT x"
-short = "enable or disable timer counting, default `1`"
+short = "enable or disable timer counting, default 1"
 
 [LAST]
 prototype = "LAST x"
@@ -135,14 +135,14 @@ Running this script twice will set the metronome to be the time between runs.
 [X]
 prototype = "X"
 prototype_set = "X x"
-short = "get / set the variable `X`, default `0`"
+short = "get / set the variable `X`, default 0"
 
 [Y]
 prototype = "Y"
 prototype_set = "Y x"
-short = "get / set the variable `Y`, default `0`"
+short = "get / set the variable `Y`, default 0"
 
 [Z]
 prototype = "Z"
 prototype_set = "Z x"
-short = "get / set the variable `Z`, default `0`"
+short = "get / set the variable `Z`, default 0"

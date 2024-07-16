@@ -110,11 +110,11 @@ short = "`x` is less than or equal to `l` or greater than or equal to `h` (out o
 [EZ]
 prototype = "EZ x"
 aliases = ["!"]
-short  = "`x` is `0`, equivalent to logical NOT"
+short  = "`x` is 0, equivalent to logical NOT"
 
 [NZ]
 prototype = "NZ x"
-short = "`x` is not `0`"
+short = "`x` is not 0"
 
 [LSH]
 prototype = "LSH x y"
@@ -181,7 +181,7 @@ prototype = "AND x y"
 aliases = ["&&"]
 short = "logical AND of `x` and `y`"
 description = """
-Logical AND of `x` and `y`. Returns `1` if both `x` and `y` are greater than `0`, otherwise it returns `0`.
+Logical AND of `x` and `y`. Returns `1` if both `x` and `y` are greater than 0, otherwise it returns 0.
 """
 
 [AND3]
@@ -189,7 +189,7 @@ prototype = "AND3 x y z"
 aliases = ["&&&"]
 short = "logical AND of `x`, `y` and `z`"
 description = """
-Logical AND of `x`, `y` and `z`. Returns `1` if both `x`, `y` and `z` are greater than `0`, otherwise it returns `0`.
+Logical AND of `x`, `y` and `z`. Returns `1` if both `x`, `y` and `z` are greater than 0, otherwise it returns 0.
 """
 
 [AND4]
@@ -197,7 +197,7 @@ prototype = "AND4 x y z a"
 aliases = ["&&&&"]
 short = "logical AND of `x`, `y`, `z` and `a`"
 description = """
-Logical AND of `x`, `y`, `z` and `a`. Returns `1` if both `x`, `y`, `z` and `a` are greater than `0`, otherwise it returns `0`.
+Logical AND of `x`, `y`, `z` and `a`. Returns `1` if both `x`, `y`, `z` and `a` are greater than 0, otherwise it returns 0.
 """
 
 [OR]
@@ -205,7 +205,7 @@ prototype = "OR x y"
 aliases = ["||"]
 short = "logical OR of `x` and `y`"
 description = """
-Logical OR of `x` and `y`. Returns `1` if either `x` or `y` are greater than `0`, otherwise it returns `0`.
+Logical OR of `x` and `y`. Returns `1` if either `x` or `y` are greater than 0, otherwise it returns 0.
 """
 
 [OR3]
@@ -213,7 +213,7 @@ prototype = "OR3 x y z"
 aliases = ["|||"]
 short = "logical OR of `x`, `y` and `z`"
 description = """
-Logical OR of `x`, `y` and `z`. Returns `1` if either `x`, `y` or `z` are greater than `0`, otherwise it returns `0`.
+Logical OR of `x`, `y` and `z`. Returns `1` if either `x`, `y` or `z` are greater than 0, otherwise it returns 0.
 """
 
 [OR4]
@@ -221,7 +221,7 @@ prototype = "OR4 x y z a"
 aliases = ["||||"]
 short = "logical OR of `x`, `y`, `z` and `a`"
 description = """
-Logical OR of `x`, `y`, `z` and `a`. Returns `1` if either `x`, `y`, `z` or `a` are greater than `0`, otherwise it returns `0`.
+Logical OR of `x`, `y`, `z` and `a`. Returns `1` if either `x`, `y`, `z` or `a` are greater than 0, otherwise it returns 0.
 """
 
 [SCALE]
@@ -232,11 +232,11 @@ short = "scale `i` from range `a` to `b` to range `x` to `y`, i.e. `i * (y - x) 
 [SCALE0]
 prototype = "SCALE a b i"
 aliases = ["SCL0"]
-short = "scale `i` from range `0` to `a` to range `0` to `b`"
+short = "scale `i` from range 0 to `a` to range 0 to `b`"
 
 [EXP]
 prototype = "EXP x"
-short = "exponentiation table lookup. `0-16383` range (V `0-10`)"
+short = "exponentiation table lookup. 0-16383 range (`V` 0-10)"
 
 [SGN]
 prototype = "SGN x"
