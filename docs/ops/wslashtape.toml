@@ -1,22 +1,22 @@
 ["W/T.REC"]
-prototype = "W/T.REC active"
-short = "Sets recording state to `active` (s8)"
+prototype = "W/T.REC x"
+short = "Sets recording state (0/1)"
 
 ["W/T.PLAY"]
 prototype = "W/T.PLAY playback"
-short = "Set the playback state. -1 will flip playback direction (s8)"
+short = "Set the playback state. -1 will flip playback direction"
 
 ["W/T.REV"]
 prototype = "W/T.REV"
 short = "Reverse the direction of playback"
 
 ["W/T.SPEED"]
-prototype = "W/T.SPEED speed deno"
-short = "Set speed as a rate, or ratio. Negative values are reverse (s16V)"
+prototype = "W/T.SPEED n d"
+short = "Set speed as a rate, calculated by `n` / `d` (numerator/denominator). Negative values are reverse (s16V)"
 
 ["W/T.FREQ"]
-prototype = "W/T.FREQ freq"
-short = "Set speed as a `frequency` (s16V) style value. Maintains reverse state"
+prototype = "W/T.FREQ f"
+short = "Set speed as a 'frequency' (s16V) style value `f`. Maintains reverse state"
 
 ["W/T.ERASE.LVL"]
 prototype = "W/T.ERASE.LVL level"
@@ -31,8 +31,8 @@ prototype = "W/T.REC.LVL gain"
 short = "Level of input material recorded to tape (s16V)"
 
 ["W/T.ECHOMODE"]
-prototype = "W/T.ECHOMODE is_echo"
-short = "Set to 1 to playback before erase. 0 (default) erases first (s8)"
+prototype = "W/T.ECHOMODE x"
+short = "Set to 1 to playback before erase. 0 (default) erases first"
 
 ["W/T.LOOP.START"]
 prototype = "W/T.LOOP.START"
@@ -43,24 +43,24 @@ prototype = "W/T.LOOP.END"
 short = "Set the current time as the loop end, and jump to start"
 
 ["W/T.LOOP.ACTIVE"]
-prototype = "W/T.LOOP.ACTIVE state"
-short = "Set the state of looping (s8)"
+prototype = "W/T.LOOP.ACTIVE x"
+short = "Set the state of looping (0/1)"
 
 ["W/T.LOOP.SCALE"]
-prototype = "W/T.LOOP.SCALE scale"
-short = "Mul(Positive) or Div(Negative) loop brace by arg. Zero resets to original window (s8)"
+prototype = "W/T.LOOP.SCALE x"
+short = "Multiply (positive) or divide(negative) loop brace by `x`. Zero resets to original window (s8)"
 
 ["W/T.LOOP.NEXT"]
-prototype = "W/T.LOOP.NEXT direction"
-short = "Move loop brace forward/backward by length of loop. Zero jumps to loop start (s8)"
+prototype = "W/T.LOOP.NEXT dir"
+short = "Move loop brace forward/backward by length of loop. Pos = fwd, neg = bkwd. 0 jumps to loop start (eg. retriggers). (s8)"
 
 ["W/T.TIME"]
-prototype = "W/T.TIME seconds sub"
-short = "Move playhead to an arbitrary location on tape (s16)"
+prototype = "W/T.TIME sec sub"
+short = "Move playhead to an arbitrary location on tape. `sec` is a whole number of seconds, `sub` is subseconds where 1V = 1 sec. Uses 2 args because TT only supports 16bit args. (s16V)"
 
 ["W/T.SEEK"]
-prototype = "W/T.SEEK seconds sub"
-short = "Move playhead relative to current position (s16)"
+prototype = "W/T.SEEK sec sub"
+short = "Move playhead relative to current position. `sec` is a whole number of seconds, `sub` is subseconds where 1V = 1 sec. Uses 2 args because TT only supports 16bit args. (s16V)"
 
 ["W/T.CLEARTAPE"]
 prototype = "W/T.CLEARTAPE"

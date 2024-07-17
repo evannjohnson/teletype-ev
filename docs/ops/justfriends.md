@@ -1,5 +1,8 @@
 ## Just Type
 
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}%
+
 More extensively covered in the [Just Friends Documentation](https://github.com/whimsicalraps/Just-Friends/blob/main/Just-Type.md).
 
 Copied below, modified and stripped of crow commands and unimplemented (proposed) teletype commands.
@@ -35,7 +38,11 @@ Some commands are 'set' only, while others and 'get' only, but many have both fu
 
 Furthermore, getters work quite differently on Teletype vs crow. For Teletype, the getter will query the value and return it directly. On crow, the response to a `ii.jf.get()` call will come through the `ii.jf.event( event, value )` function which you must add to your script. For an example, you can call `ii.jf.help()` and crow will show you what this event function should look like.
 
-### The basics: Remote control
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}%
+
+### Remote control
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}%
 
 These commands allow remote control over Just Friends. Imagine a set of invisible patch cables connected to the TRIGGERS and RUN jacks.
 
@@ -148,8 +155,11 @@ JF.TR 1 1
 JF2.TR 1 1
 ```
 
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
-### Panel Queries
+### Panel queries
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 
 The physical panel settings are able to be queried too. With some outside-the-box thinking, you can use the Just Friends panel to manipulate parameters inside your script. This could augment the controls (eg. the *CURVE* value could change `vtrigger` level), or introduce additional dimensions (eg. *FM* could select different `TUNE` ratios).
 
@@ -191,7 +201,7 @@ Finally the parameters can be used entirely tangentially to Just Friends' functi
     - 0 = C3
     - 1V/octave scaled
 
-### Modal Personality
+### Modal personality
 
 Until now, we've only been speaking of modifying or extending the base Just Friends behaviours. Conversely, it is also possible to change some fundamentals of the JF system, leaning more heavily on the Teletype / crow integration for configuration and control.
 
@@ -207,7 +217,11 @@ Activates *Synthesis* or *Geode* modalities.
 
 You'll likely want to put `JF.MODE x` in your INIT script.
 
-### Synthesis
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+### Synthesis mode
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 
 Synthesis is, as its name boringly suggests, a synthesizer. Further, it is a polyphonic synthesizer of six independent voices. Control is either explicitly per voice, or can be dynamically assigned in a traditional polysynth fashion.
 
@@ -276,6 +290,7 @@ Control the *pitch* of a chosen *channel* without triggering the envelope (like 
 This command is useful along with `VOX` & `NOTE` control to introduce pitch changes while a note is decaying (*transient*), or without retriggering the cyclic envelope (*cycle*). Additionally it can be very useful where you are *TRIGGER*ing the channels with CV pulses, but want to choose scales or chords digitally.
 
 
+\needspace{0.2\textheight}
 ### Attuned Vibrations
 
 `JF.GOD STATE`
@@ -286,7 +301,12 @@ Redefines C3 to align with the 'God' note. See: https://attunedvibrations.com/43
     - 0 is A=440Hz
     - 1 is A=432Hz
 
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+\needspace{0.5\textheight}
 ### Geode
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 
 In *shape*, Just Type inherits it's functionality from the standard mode. However, atop it sits a rhythmic engine for polymetric & -phasic patterns. Fundamentally this is a 'clocked' mode, whether internally so or via a continuous *tick*. The TIME & INTONE controls maintain their standard free-running influence, speeding up and slowing down *envelopes*, while the rhythms are controlled remotely.
 
@@ -459,5 +479,6 @@ While it uses a different implementation, this functionality can create [Euclide
 `JF.FM`: Returns the current state of the *FM* knob\
 `JF.TIME`: Returns the current state of the *TIME* knob + cv\
 `JF.INTONE`: Returns the current state of the *INTONE* knob + cv
+
 
 ## Just Friends reference

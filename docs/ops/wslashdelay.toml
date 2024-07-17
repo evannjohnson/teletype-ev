@@ -1,5 +1,5 @@
 ["W/D.FBK"]
-prototype = "W/D.FBK level"
+prototype = "W/D.FBK lvl"
 short = "amount of feedback from read head to write head (s16V)"
 
 ["W/D.MIX"]
@@ -35,8 +35,8 @@ prototype = "W/D.FREQ.RNG freq_range"
 short = "TBD (s8)"
 
 ["W/D.RATE"]
-prototype = "W/D.RATE multiplier"
-short = "direct `multiplier` (s16V) of tape speed"
+prototype = "W/D.RATE mul"
+short = "direct `mul`tiplier (s16V) of tape speed"
 
 ["W/D.FREQ"]
 prototype = "W/D.FREQ volts"
@@ -44,7 +44,7 @@ short = "manipulate tape speed with musical values (s16V)"
 
 ["W/D.CLK"]
 prototype = "W/D.CLK"
-short = "receive clock pulse for synchronization"
+short = "sends clock pulse for synchronization"
 
 ["W/D.CLK.RATIO"]
 prototype = "W/D.CLK.RATIO mul div"

@@ -47,8 +47,8 @@ prototype = "W/S.FM.INDEX index"
 short = "amount of FM modulation. -5=negative, 0=minimum, 5=maximum (s16V)"
 
 ["W/S.FM.RATIO"]
-prototype = "W/S.FM.RATIO num den"
-short = "ratio of the FM modulator to carrier as a ratio. floating point values up to 20.0 supported (s16V)"
+prototype = "W/S.FM.RATIO n d"
+short = "ratio of the FM modulator to carrier as a ratio, `n`umerator / `d`enominator. floating point values up to 20.0 supported (s16V)"
 
 ["W/S.FM.ENV"]
 prototype = "W/S.FM.ENV amount"

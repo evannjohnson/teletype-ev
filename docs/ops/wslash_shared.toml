@@ -1,6 +1,6 @@
 ["W/.SEL"]
 prototype = "W/.SEL x"
-short = "Sets target W/2.0 unit (`1` = primary, `2` = secondary)."
+short = "Sets target W/2.0 unit (1 = primary, 2 = secondary)."
 
 ["W/1"]
 prototype = "W/1: ..."
