@@ -22,7 +22,7 @@ Group ops `G.GBTN.#` and `G.GFDR.#` allow you to get/set properties for a group 
   
 All ops can be roughly grouped as follows: general use, groups, drawing, buttons, faders and area ops. There are some specialized ops as well that will be handy for some specific use cases (and make sure to take advantage of being able to rotate and dim grid!). And now let's see them in action...
   
-### Trigger Visualizer
+### Trigger visualizer
 
 It can be useful to have some visual feedback about what's going on with your scene. The most obvious candidate is tracking incoming triggers. We could use `G.REC` but it's actually easier to use buttons for this since we won't have to calculate the coordinates. We'll use 4x4 buttons, 2 rows with 4 buttons each:
 
@@ -60,7 +60,7 @@ download the scene:
 
 https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/trigger_visualizer.txt
 
-### Simple Sequencer
+### Simple sequencer
 
 A really simple 16 step sequencer:
 
@@ -90,7 +90,7 @@ download the scene:
 
 https://raw.githubusercontent.com/scanner-darkly/teletype_lib/main/grid/simple_sequencer.txt
 
-### Lofi Oscilloscope
+### Lofi oscilloscope
 
 This is a very low res oscilloscope but can be fun as a way to visualize your patch. 
 
