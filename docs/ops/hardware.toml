@@ -1,5 +1,5 @@
 ["CV"]
-prototype = "CV x"
+prototype = "CV x (y)"
 prototype_set = "CV x y"
 short = "CV target value"
 description = """
@@ -8,7 +8,7 @@ Get the value of CV associated with output `x`, or set the CV output of `x` to
 """
 
 ["CV.OFF"]
-prototype = "CV.OFF x"
+prototype = "CV.OFF x (y)"
 prototype_set = "CV.OFF x y"
 short = "CV offset added to output"
 description = """
@@ -32,7 +32,7 @@ Get the current CV value at output `x` with slew and offset applied.
 """
 
 ["CV.SLEW"]
-prototype = "CV.SLEW x"
+prototype = "CV.SLEW x (y)"
 prototype_set = "CV.SLEW x y"
 short = "Get/set the CV slew time in ms"
 description = """
@@ -72,7 +72,7 @@ prototype = "PARAM.SCALE min max"
 short = "Set static scaling of the PARAM knob to between `MIN` and `MAX`."
 
 ["TR"]
-prototype = "TR x"
+prototype = "TR x (y)"
 prototype_set = "TR x y"
 short = "Set trigger output x to y (0-1)"
 description = """
@@ -89,7 +89,7 @@ Pulse trigger output x.
 """
 
 ["TR.TIME"]
-prototype = "TR.TIME x"
+prototype = "TR.TIME x (y)"
 prototype_set = "TR.TIME x y"
 short = "Set the pulse time of trigger x to y ms"
 description = """
@@ -105,7 +105,7 @@ Flip the state of trigger output `x`.
 """
 
 ["TR.POL"]
-prototype = "TR.POL x"
+prototype = "TR.POL x (y)"
 prototype_set = "TR.POL x y"
 short = "Set polarity of trigger output x to y (0-1)"
 description = """
@@ -115,7 +115,7 @@ When TR.POL = 0, the inverse is true, 1 to 0 to 1.
 """
 
 ["MUTE"]
-prototype = "MUTE x"
+prototype = "MUTE x (y)"
 prototype_set = "MUTE x y"
 short = "Disable trigger input x"
 description = """
@@ -175,7 +175,7 @@ placing `LIVE.DASH 1` in the init script and placing `PRINT 1 M` in the metro sc
 """
 
 ["PRINT"]
-prototype = "PRINT x"
+prototype = "PRINT x (y)"
 prototype_set = "PRINT x y"
 aliases = ["PRT"]
 short = "Print a value on a live mode dashboard or get the printed value"

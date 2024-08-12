@@ -110,7 +110,7 @@ Chord Scales - Refer to chord indices in `N.C` OP
  """
 
 ["N.B"]
-prototype = "N.B d"
+prototype = "N.B d (s)"
 prototype_set = "N.B r s"
 short = "get degree `d` of scale/set scale root to `r`, scale to `s`, `s` is either bit mask (`s` >= 1) or scale preset (`s` < 1)"
 description = """
@@ -180,7 +180,7 @@ Values of `s` less than 1 sets the bit mask to a preset scale:
 """
 
 ["N.BX"]
-prototype = "N.BX i d"
+prototype = "N.BX i d (s)"
 prototype_set = "N.BX i r s"
 short = "multi-index version of N.B, scale at `i` (index) 0 is shared with N.B"
 description = """

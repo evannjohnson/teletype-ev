@@ -1,5 +1,5 @@
 ["I2M.CH"]  
-prototype = "I2M.CH"  
+prototype = "I2M.CH (x)"
 prototype_set = "I2M.CH x"
 aliases = ["I2M.#"]    
 short = "Get currently set MIDI channel / Set MIDI channel `x` (1..16 for TRS, 17..32 for USB) for MIDI out"  
@@ -8,7 +8,7 @@ Get currently set MIDI channel / Set MIDI channel `x` (1..16 for TRS, 17..32 for
 """
 
 ["I2M.TIME"]
-prototype = "I2M.TIME"  
+prototype = "I2M.TIME (x)"
 prototype_set = "I2M.TIME x"  
 aliases = ["I2M.T"]  
 short = "Get current note duration / Set note duration of MIDI notes to `x` ms (0..32767) for current channel"  
@@ -17,7 +17,7 @@ Get current note duration / Set note duration of MIDI notes to `x` ms (0..32767)
 """
 
 ["I2M.T#"]
-prototype = "I2M.T# ch"  
+prototype = "I2M.T# ch (x)"
 prototype_set = "I2M.T# ch x"  
 short = "Get current note duration / Set note duration of MIDI notes to `x` ms (0..32767) for channel `ch` (0..32)."  
 description = """
@@ -25,7 +25,7 @@ Get current note duration / Set note duration of MIDI notes to `x` ms (0..32767)
 """
 
 ["I2M.SHIFT"]  
-prototype = "I2M.SHIFT"  
+prototype = "I2M.SHIFT (x)"
 prototype_set = "I2M.SHIFT x"  
 aliases = ["I2M.S"]  
 short = "Get current transposition / Set transposition of MIDI notes to `x` semitones (-127..127) for current channel"  
@@ -34,7 +34,7 @@ Get current transposition / Set transposition of MIDI notes to `x` semitones (-1
 """
 
 ["I2M.S#"]
-prototype = "I2M.S# ch"  
+prototype = "I2M.S# ch (x)"
 prototype_set = "I2M.S# ch x"  
 short = "Get current transposition / Set transposition of MIDI notes to `x` semitones (-127..127) for channel `ch` (0..32)"
 description = """
@@ -70,7 +70,7 @@ Set maximum note number for MIDI notes to `x` (0..127), using mode `y` (0..3), f
 """
 
 ["I2M.REP"]  
-prototype = "I2M.REP"  
+prototype = "I2M.REP (x)"
 prototype_set = "I2M.REP x"  
 short = "Get current repetition / Set repetition of MIDI notes to `x` repetitions (1..127) for current channel"  
 description = """
@@ -85,7 +85,7 @@ Get current repetition / Set repetition of MIDI notes to `x` repetitions (1..127
 """
 
 ["I2M.RAT"]  
-prototype = "I2M.RAT"  
+prototype = "I2M.RAT (x)"
 prototype_set = "I2M.RAT x"  
 short = "Get current ratcheting / Set ratcheting of MIDI notes to `x` ratchets (1..127) for current channel"  
 description = """
@@ -100,22 +100,22 @@ Get current ratcheting / Set ratcheting of MIDI notes to `x` ratchets (1..127) f
 """
 
 ["I2M.MUTE"]
-prototype = "I2M.MUTE"
+prototype = "I2M.MUTE (x)"
 prototype_set = "I2M.MUTE x"  
 short = "Get mute state / Set mute state of current MIDI channel to `x` (0..1)"  
 
 ["I2M.MUTE#"]
-prototype = "I2M.MUTE#"
+prototype = "I2M.MUTE# (x)"
 prototype_set = "I2M.MUTE# ch x"  
 short = "Get mute state / Set mute state of MIDI channel `ch` to `x` (0..1)"  
 
 ["I2M.SOLO"]
-prototype = "I2M.SOLO"
+prototype = "I2M.SOLO (x)"
 prototype_set = "I2M.SOLO x"  
 short = "Get solo state / Set solo state of current MIDI channel to `x` (0..1)"  
 
 ["I2M.SOLO#"]
-prototype = "I2M.SOLO#"
+prototype = "I2M.SOLO# (x)"
 prototype_set = "I2M.SOLO# ch x"  
 short = "Get solo state / Set solo state of MIDI channel `ch` to `x` (0..1)"  
 
@@ -188,7 +188,7 @@ prototype = "I2M.CCV# ch x y"
 short = "Send MIDI CC message for controller `x` (0..127) with volt value `y` (0..16383, 0..+10V) on channel `ch` (1..32)"  
 
 ["I2M.CC.OFF"]  
-prototype = "I2M.CC.OFF x"  
+prototype = "I2M.CC.OFF x (y)"  
 prototype_set = "I2M.CC.OFF x y"  
 short = "Get current offset / Set offset of values of controller `x` (0..127) to `y` (-127..127)"  
 description = """
@@ -196,12 +196,12 @@ Get current offset / Set offset of values of controller `x` (0..127) to `y` (-12
 """
 
 ["I2M.CC.OFF#"]  
-prototype = "I2M.CC.OFF# ch x"  
+prototype = "I2M.CC.OFF# ch x (y)"  
 prototype_set = "I2M.CC.OFF# ch x y"  
 short = "Get current offset / Set offset of values of controller `x` (0..127) to `y` (-127..127) for channel `ch` (1..32)"  
 
 ["I2M.CC.SLEW"]  
-prototype = "I2M.CC.SLEW x"  
+prototype = "I2M.CC.SLEW x (y)"  
 prototype_set = "I2M.CC.SLEW x y"  
 short = "Get current slew time for controller `x` / Set slew time for controller `x` (0..127) to `y` ms (0..32767)"   
 description = """
@@ -209,7 +209,7 @@ Get current slew time for controller `x` / Set slew time for controller `x` (0..
 """
 
 ["I2M.CC.SLEW#"]  
-prototype = "I2M.CC.SLEW# ch x"  
+prototype = "I2M.CC.SLEW# ch x (y)"  
 prototype_set = "I2M.CC.SLEW# ch x y"  
 short = "Get current slew time for controller `x` / Set slew time for controller `x` (0..127) to `y` ms (0..32767) for channel `ch` (1..32)"   
 
@@ -225,7 +225,7 @@ prototype = "I2M.NRPN# ch x y z"
 short = "Send MIDI NRPN message (high-res CC) for parameter MSB `x` and LSB `y` with value `y` (0..16383) on channel `ch` (1..32)"  
 
 ["I2M.NRPN.OFF"]  
-prototype = "I2M.NRPN.OFF x y"  
+prototype = "I2M.NRPN.OFF x y (z)"  
 prototype_set = "I2M.NRPN.OFF x y z"  
 short = "Get current offset / Set offset of values of NRPN messages to `z` (-16384..16383)"  
 description = """
@@ -233,12 +233,12 @@ Get current offset / Set offset of values of NRPN messages to `z` (-16384..16383
 """
 
 ["I2M.NRPN.OFF#"]  
-prototype = "I2M.NRPN.OFF# ch x y"  
+prototype = "I2M.NRPN.OFF# ch x y (z)"  
 prototype_set = "I2M.NRPN.OFF# ch x y z"  
 short = "Get current offset / Set offset of values of NRPN messages to `z` (-16384..16383) for channel `ch` (1..32)"  
 
 ["I2M.NRPN.SLEW"]  
-prototype = "I2M.NRPN.SLEW x y"  
+prototype = "I2M.NRPN.SLEW x y (z)"  
 prototype_set = "I2M.NRPN.SLEW x y z"  
 short = "Get current slew time / Set slew time for NRPN messages to `z` ms (0..32767)"  
 description = """
@@ -246,7 +246,7 @@ Get current slew time / Set slew time for NRPN messages to `z` ms (0..32767). De
 """
 
 ["I2M.NRPN.SLEW#"]  
-prototype = "I2M.NRPN.SLEW# ch x y"  
+prototype = "I2M.NRPN.SLEW# ch x y (z)"  
 prototype_set = "I2M.NRPN.SLEW# ch x y z"  
 short = "Get current slew time / Set slew time for NRPN messages to `z` ms (0..32767) for channel `ch` (1..32)"  
 
@@ -353,7 +353,7 @@ Clear chord `x` (0..8). Use `x = 0` to clear all chords.
 """
 
 ["I2M.C.L"]  
-prototype = "I2M.C.L x"  
+prototype = "I2M.C.L x (y)"  
 prototype_set = "I2M.C.L x y"  
 short = "Get current length / Set length of chord `x` (0..8) to `y` (1..8), use `x = 0` to set length of all chords"  
 description = """
@@ -556,7 +556,7 @@ Set the buffer mode to `x` (0..1). The buffer can work in two different modes: 1
 """
 
 ["I2M.Q.CH"]  
-prototype = "I2M.Q.CH"  
+prototype = "I2M.Q.CH (x)"  
 prototype_set = "I2M.Q.CH x"  
 aliases = ["I2M.Q.#"]  
 short = "Get currently set MIDI channel / Set MIDI channel `x` (1..16) for MIDI in"  

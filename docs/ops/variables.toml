@@ -1,30 +1,30 @@
 [A]
-prototype = "A"
+prototype = "A (x)"
 prototype_set = "A x"
 short = "get / set the variable `A`, default 1"
 
 [B]
-prototype = "B"
+prototype = "B (x)"
 prototype_set = "B x"
 short = "get / set the variable `B`, default 2"
 
 [C]
-prototype = "C"
+prototype = "C (x)"
 prototype_set = "C x"
 short = "get / set the variable `C`, default 3"
 
 [D]
-prototype = "D"
+prototype = "D (x)"
 prototype_set = "D x"
 short = "get / set the variable `D`, default 4"
 
 [FLIP]
-prototype = "FLIP"
+prototype = "FLIP (x)"
 prototype_set = "FLIP x"
 short = "returns the opposite of its previous state (0 or 1) on each read (also settable)"
 
 [I]
-prototype = "I"
+prototype = "I (x)"
 prototype_set = "I x"
 short = """get / set the per-script variable `I`. *See also `L:` in control flow*"""
 description="""
@@ -36,7 +36,7 @@ its `I` value initialized with the calling loop's current `I` value.
 """
 
 [J]
-prototype = "J"
+prototype = "J (x)"
 prototype_set = "J x"
 short = """get / set the per-script variable `J`"""
 description="""
@@ -45,7 +45,7 @@ a script from another script you can still use and modify `J` without affecting 
 """
 
 [K]
-prototype = "K"
+prototype = "K (x)"
 prototype_set = "K x"
 short = """get / set the per-script variable `K`"""
 description="""
@@ -54,7 +54,7 @@ a script from another script you can still use and modify `K` without affecting 
 """
 
 [O]
-prototype = "O"
+prototype = "O (x)"
 prototype_set = "O x"
 short = "auto-increments _after_ each access, can be set, starting value 0"
 description="""
@@ -83,37 +83,37 @@ O           => 61
 """
 
 ["O.INC"]
-prototype = "O.INC"
+prototype = "O.INC (x)"
 prototype_set = "O.INC x"
 short = "how much to increment `O` by on each invocation, default 1"
 
 ["O.MIN"]
-prototype = "O.MIN"
+prototype = "O.MIN (x)"
 prototype_set = "O.MIN x"
 short = "the lower bound for `O`, default 0"
 
 ["O.MAX"]
-prototype = "O.MAX"
+prototype = "O.MAX (x)"
 prototype_set = "O.MAX x"
 short = "the upper bound for `O`, default 63"
 
 ["O.WRAP"]
-prototype = "O.WRAP"
+prototype = "O.WRAP (x)"
 prototype_set = "O.WRAP x"
 short = "should `O` wrap when it reaches its bounds, default 1"
 
 [T]
-prototype = "T"
+prototype = "T (x)"
 prototype_set = "T x"
 short = "get / set the variable `T`, typically used for time, default 0"
 
 [TIME]
-prototype = "TIME"
+prototype = "TIME (x)"
 prototype_set = "TIME x"
 short = "timer value, counts up in ms., wraps after 32s, can be set"
 
 ["TIME.ACT"]
-prototype = "TIME.ACT"
+prototype = "TIME.ACT (x)"
 prototype_set = "TIME.ACT x"
 short = "enable or disable timer counting, default 1"
 
@@ -133,16 +133,16 @@ Running this script twice will set the metronome to be the time between runs.
 """
 
 [X]
-prototype = "X"
+prototype = "X (x)"
 prototype_set = "X x"
 short = "get / set the variable `X`, default 0"
 
 [Y]
-prototype = "Y"
+prototype = "Y (x)"
 prototype_set = "Y x"
 short = "get / set the variable `Y`, default 0"
 
 [Z]
-prototype = "Z"
+prototype = "Z (x)"
 prototype_set = "Z x"
 short = "get / set the variable `Z`, default 0"

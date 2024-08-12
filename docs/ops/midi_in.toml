@@ -1,5 +1,5 @@
 ["MI.$"]
-prototype = "MI.$ x"
+prototype = "MI.$ x (y)"
 prototype_set = "MI.$ x y"
 short = "assign MIDI event type `x` to script `y`"
 description = """
@@ -112,7 +112,7 @@ prototype = "MI.CCV"
 short = "get the controller value scaled to 0..+10V range at index specified by variable `I`"
 
 ["MI.CLKD"]
-prototype = "MI.CLKD"
+prototype = "MI.CLKD (x)"
 prototype_set = "MI.CLKD x"
 short = "set clock divider to `x` (1-24) or get the current divider"
 

@@ -1,5 +1,5 @@
 ["IIA"]
-prototype = "IIA"
+prototype = "IIA (address)"
 prototype_set = "IIA address"
 short = "Set I2C address or get the currently selected address"
 description = """

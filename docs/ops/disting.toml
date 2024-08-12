@@ -1,5 +1,5 @@
 ["EX"]
-prototype = "EX"
+prototype = "EX (x)"
 prototype_set = "EX x"
 short = "get or set currently selected unit to `x` (1-4)"
 description = """
@@ -25,7 +25,7 @@ prototype = "EX4: ..."
 short = "send following Disting ops to unit 4 ignoring the currently selected unit"
 
 ["EX.PRESET"]
-prototype = "EX.PRESET"
+prototype = "EX.PRESET (x)"
 prototype_set = "EX.PRESET x"
 aliases = ["EX.PRE"]
 short = "load preset `x` or get the currently loaded preset"
@@ -39,7 +39,7 @@ prototype = "EX.RESET"
 short = "reset the currently loaded preset"
 
 ["EX.ALG"]
-prototype = "EX.ALG"
+prototype = "EX.ALG (x)"
 prototype_set = "EX.ALG x"
 aliases = ["EX.A"]
 short = "get or set the current algorithm to `x` (single algorithms only)"
@@ -54,7 +54,7 @@ Handy for controlling multiple parameters at once.
 """
 
 ["EX.PARAM"]
-prototype = "EX.PARAM x"
+prototype = "EX.PARAM x (y)"
 prototype_set = "EX.PARAM x y"
 aliases = ["EX.P"]
 short = "set parameter `x` to value `y` or get the current parameter value"
@@ -202,7 +202,7 @@ prototype = "EX.LP.DOWN? x"
 short = "return 1 if loop `x` is transposed octave down, 0 otherwise"
 
 ["EX.M.CH"]
-prototype = "EX.M.CH"
+prototype = "EX.M.CH (x)"
 prototype_set = "EX.M.CH x"
 short = "get or set the currently selected MIDI channel (1-16)"
 description = """
@@ -259,7 +259,7 @@ prototype = "EX.M.CONT"
 short = "send MIDI Continue message"
 
 ["EX.SB.CH"]
-prototype = "EX.SB.CH"
+prototype = "EX.SB.CH (x)"
 prototype_set = "EX.SB.CH x"
 short = "get or set the currently selected Select Bus channel (1-16)"
 description = """
@@ -304,12 +304,12 @@ prototype = "EX.SB.CONT"
 short = "send Select Bus Continue message"
 
 ["EX.A1"]
-prototype = "EX.A1"
+prototype = "EX.A1 (x)"
 prototype_set = "EX.A1 x"
 short = "get or set the left dual algorithm"
 
 ["EX.A2"]
-prototype = "EX.A2"
+prototype = "EX.A2 (x)"
 prototype_set = "EX.A2 x"
 short = "get or set the right dual algorithm"
 
@@ -318,12 +318,12 @@ prototype = "EX.A12 x y"
 short = "set both dual algorithms"
 
 ["EX.P1"]
-prototype = "EX.P1 x"
+prototype = "EX.P1 x (y)"
 prototype_set = "EX.P1 x y"
 short = "get left algorithm parameter `x` or set it to value `y`"
 
 ["EX.P2"]
-prototype = "EX.P2 x"
+prototype = "EX.P2 x (y)"
 prototype_set = "EX.P2 x y"
 short = "get right algorithm parameter `x` or set it to value `y`"
 
@@ -352,7 +352,7 @@ prototype = "EX.MAX2 x"
 short = "get right algorithm parameter maximum value"
 
 ["EX.Z1"]
-prototype = "EX.Z1"
+prototype = "EX.Z1 (x)"
 prototype_set = "EX.Z1 x"
 short = "get left Z knob value or set left Z parameter (0..127 range)"
 description = """
@@ -364,7 +364,7 @@ prototype = "EX.ZO1"
 short = "restore control for left Z knob and input"
 
 ["EX.Z2"]
-prototype = "EX.Z2"
+prototype = "EX.Z2 (x)"
 prototype_set = "EX.Z2 x"
 short = "get right Z knob value or set right Z parameter (0..127 range)"
 description = """

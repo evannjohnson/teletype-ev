@@ -1,5 +1,5 @@
 ["Q"]
-prototype = "Q"
+prototype = "Q (x)"
 prototype_set = "Q x"
 short = "Modify the queue entries"
 description = """
@@ -7,7 +7,7 @@ Gets the output value from the queue, or places `x` into the queue.
 """
 
 ["Q.N"]
-prototype = "Q.N"
+prototype = "Q.N (x)"
 prototype_set = "Q.N x"
 short = "The queue length"
 description = """
@@ -15,7 +15,7 @@ Gets/sets the length of the queue. The length is 1-indexed.
 """
 
 ["Q.AVG"]
-prototype = "Q.AVG"
+prototype = "Q.AVG (x)"
 prototype_set = "Q.AVG x"
 short = "Return the average of the queue"
 description = """
@@ -24,7 +24,7 @@ value of each entry in the queue to `x`.
 """
 
 ["Q.CLR"]
-prototype = "Q.CLR"
+prototype = "Q.CLR (x)"
 prototype_set = "Q.CLR x"
 short = "Clear queue"
 description = """
@@ -32,7 +32,7 @@ Clear queue, set all values to 0, length to 1. If parameter `x` is provided, set
 """
 
 ["Q.GRW"]
-prototype = "Q.GRW"
+prototype = "Q.GRW (x)"
 prototype_set = "Q.GRW x"
 short = "Get/set grow state"
 description = """
@@ -40,7 +40,7 @@ If grow is set (value of 1) the queue will automatically grow and shrink when us
 """
 
 ["Q.SUM"]
-prototype = "Q.SUM"
+prototype = "Q.SUM (x)"
 prototype_set = "Q.SUM x"
 short = "Get sum of elements"
 description = """
@@ -48,7 +48,7 @@ Get sum of all elements in queue.
 """
 
 ["Q.MIN"]
-prototype = "Q.MIN"
+prototype = "Q.MIN (x)"
 prototype_set = "Q.MIN x"
 short = "Get/set minimum value"
 description = """
@@ -56,7 +56,7 @@ Get the minimum value of elements in queue. If `x` is provided, set elements wit
 """
 
 ["Q.MAX"]
-prototype = "Q.MAX"
+prototype = "Q.MAX (x)"
 prototype_set = "Q.MAX x"
 short = "Get/set maximum value"
 description = """
@@ -64,7 +64,7 @@ Get the maximum value of elements in queue. If `x` is provided, set elements wit
 """
 
 ["Q.RND"]
-prototype = "Q.RND"
+prototype = "Q.RND (x)"
 prototype_set = "Q.RND x"
 short = "Get random element/randomize elements"
 description = """
@@ -76,7 +76,7 @@ IF `x` == 0, do nothing.
 """
 
 ["Q.SRT"]
-prototype = "Q.SRT"
+prototype = "Q.SRT (SRT )"
 prototype_set = "Q.SRT "
 short = "Sort all or part of queue"
 description = """
@@ -98,7 +98,7 @@ Reverse order of elements in queue.
 """
 
 ["Q.SH"]
-prototype = "Q.SH"
+prototype = "Q.SH (x)"
 prototype_set = "Q.SH x"
 short = "Shift elements in queue"
 description = """
@@ -106,7 +106,7 @@ Shift elements `x` locations to right. Negative values of `x` shifts to the left
 """
 
 ["Q.ADD"]
-prototype = "Q.ADD x"
+prototype = "Q.ADD x (i)"
 prototype_set = "Q.ADD x i"
 short = "Perform addition on elements in queue"
 description = """
@@ -116,7 +116,7 @@ Index `i` is 0-indexed.
 """
 
 ["Q.SUB"]
-prototype = "Q.SUB x"
+prototype = "Q.SUB x (i)"
 prototype_set = "Q.SUB x i"
 short = "Perform subtraction on elements in queue"
 description = """
@@ -126,7 +126,7 @@ Index `i` is 0-indexed.
 """
 
 ["Q.MUL"]
-prototype = "Q.MUL x"
+prototype = "Q.MUL x (i)"
 prototype_set = "Q.MUL x i"
 short = "Perform multiplication on elements in queue"
 description = """
@@ -137,7 +137,7 @@ Index `i` is 0-indexed.
 """
 
 ["Q.DIV"]
-prototype = "Q.DIV x"
+prototype = "Q.DIV x (i)"
 prototype_set = "Q.DIV x i"
 short = "Perform division on elements in queue"
 description = """
@@ -148,7 +148,7 @@ Index `i` is 0-indexed.
 
 
 ["Q.MOD"]
-prototype = "Q.MOD x"
+prototype = "Q.MOD x (i)"
 prototype_set = "Q.MOD x i"
 short = "Perform module (`%`) on elements in queue"
 description = """
@@ -159,7 +159,7 @@ Index `i` is 0-indexed.
 
 
 ["Q.I"]
-prototype = "Q.I i"
+prototype = "Q.I i (x)"
 prototype_set = "Q.I i x"
 short = "Get/set value of elements at index"
 description = """
@@ -169,7 +169,7 @@ Index `i` is 0-indexed.
 """
 
 ["Q.2P"]
-prototype = "Q.2P"
+prototype = "Q.2P (i)"
 prototype_set = "Q.2P i"
 short = "Copy queue to current pattern/copy queue to pattern at index `i`"
 description = """
@@ -179,7 +179,7 @@ Index `i` is 0-indexed.
 """
 
 ["Q.P2"]
-prototype = "Q.P2"
+prototype = "Q.P2 (i)"
 prototype_set = "Q.P2 i"
 short = "Copy current pattern to queue/copy pattern at index `i` to queue"
 description = """

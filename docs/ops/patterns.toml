@@ -1,11 +1,11 @@
 ["P.N"]
-prototype = "P.N"
+prototype = "P.N (x)"
 prototype_set = "P.N x"
 short = "get/set the pattern number for the working pattern, default 0"
 description = "get/set the pattern number for the working pattern, default 0. All `P` ops refer to this pattern."
 
 [P]
-prototype = "P x"
+prototype = "P x (y)"
 prototype_set = "P x y"
 short = "get/set the value of the working pattern at index `x`"
 
@@ -25,22 +25,22 @@ This applies to `PN` as well, except the pattern number is the first variable an
 """
 
 [PN]
-prototype = "PN x y"
+prototype = "PN x y (z)"
 prototype_set = "PN x y z"
 short = "get/set the value of pattern `x` at index `y`"
 
 ["P.L"]
-prototype = "P.L"
+prototype = "P.L (x)"
 prototype_set = "P.L x"
 short = "get/set pattern length of the working pattern, non-destructive to data"
 
 ["PN.L"]
-prototype = "PN.L x"
+prototype = "PN.L x (y)"
 prototype_set = "PN.L x y"
 short = "get/set pattern length of pattern x. non-destructive to data"
 
 ["P.WRAP"]
-prototype = "P.WRAP"
+prototype = "P.WRAP (x)"
 prototype_set = "P.WRAP x"
 short = "when the working pattern reaches its bounds does it wrap (0/1), default 1 (enabled)"
 
@@ -68,32 +68,32 @@ This applies to `PN.WRAP` as well, except the pattern number is the first variab
 """
 
 ["PN.WRAP"]
-prototype = "PN.WRAP x"
+prototype = "PN.WRAP x (y)"
 prototype_set = "PN.WRAP x y"
 short = "when pattern `x` reaches its bounds does it wrap (0/1), default 1 (enabled)"
 
 ["P.START"]
-prototype = "P.START"
+prototype = "P.START (x)"
 prototype_set = "P.START x"
 short = "get/set the start location of the working pattern, default 0"
 
 ["PN.START"]
-prototype = "PN.START x"
+prototype = "PN.START x (y)"
 prototype_set =  "PN.START x y"
 short = "get/set the start location of pattern `x`, default 0"
 
 ["P.END"]
-prototype = "P.END"
+prototype = "P.END (x)"
 prototype_set = "P.END x"
 short = "get/set the end location of the working pattern, default 63"
 
 ["PN.END"]
-prototype = "PN.END x"
+prototype = "PN.END x (y)"
 prototype_set = "PN.END x y"
 short = "get/set the end location of the pattern `x`, default 63"
 
 ["P.I"]
-prototype = "P.I"
+prototype = "P.I (x)"
 prototype_set = "P.I x"
 short = "get/set index position for the working pattern."
 description = """
@@ -119,37 +119,37 @@ This applies to `PN.I`, except the pattern number is the first variable and a se
 """
 
 ["PN.I"]
-prototype = "PN.I x"
+prototype = "PN.I x (y)"
 prototype_set = "PN.I x y"
 short = "get/set index position for pattern `x`"
 
 ["P.HERE"]
-prototype = "P.HERE"
+prototype = "P.HERE (x)"
 prototype_set = "P.HERE x"
 short = "get/set value at current index of working pattern"
 
 ["PN.HERE"]
-prototype = "PN.HERE x"
+prototype = "PN.HERE x (y)"
 prototype_set = "PN.HERE x y"
 short = "get/set value at current index of pattern `x`"
 
 ["P.NEXT"]
-prototype = "P.NEXT"
+prototype = "P.NEXT (x)"
 prototype_set = "P.NEXT x"
 short = "increment index of working pattern then get/set value"
 
 ["PN.NEXT"]
-prototype = "PN.NEXT x"
+prototype = "PN.NEXT x (y)"
 prototype_set = "PN.NEXT x y"
 short = "increment index of pattern `x` then get/set value"
 
 ["P.PREV"]
-prototype = "P.PREV"
+prototype = "P.PREV (x)"
 prototype_set = "P.PREV x"
 short = "decrement index of working pattern then get/set value"
 
 ["PN.PREV"]
-prototype = "PN.PREV x"
+prototype = "PN.PREV x (y)"
 prototype_set = "PN.PREV x y"
 short = "decrement index of pattern `x` then get/set value"
 

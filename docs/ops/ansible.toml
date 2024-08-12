@@ -3,7 +3,7 @@ prototype = "ANS.G.LED x y"
 short = "get grid LED buffer at position `x`, `y`"
 
 ["ANS.G"]
-prototype = "ANS.G x y"
+prototype = "ANS.G x y (z)"
 prototype_set = "ANS.G x y z"
 short = "get/set grid key on/off state ( `z` ) at position `x`, `y`"
 
@@ -16,12 +16,12 @@ prototype = "ANS.A.LED n x"
 short = "read arc LED buffer for ring `n`, LED `x` clockwise from north"
 
 ["ANS.A"]
-prototype = "ANS.A"
+prototype = "ANS.A (d)"
 prototype_set = "ANS.A n d"
 short = "send arc encoder event for ring `n`, delta `d`"
 
 ["ANS.APP"]
-prototype = "ANS.APP"
+prototype = "ANS.APP (x)"
 prototype_set = "ANS.APP x"
 short = "get/set active app"
 description = """
@@ -37,27 +37,27 @@ Get or change the app that is active on Ansible. Numbering:
 """
 
 ["KR.PRE"]
-prototype = "KR.PRE"
+prototype = "KR.PRE (x)"
 prototype_set = "KR.PRE x"
 short = "return current preset / load preset `x`"
 
 ["KR.PERIOD"]
-prototype = "KR.PERIOD"
+prototype = "KR.PERIOD (x)"
 prototype_set = "KR.PERIOD x"
 short = "get/set internal clock period"
 
 ["KR.PAT"]
-prototype = "KR.PAT"
+prototype = "KR.PAT (x)"
 prototype_set = "KR.PAT x"
 short = "get/set current pattern"
 
 ["KR.SCALE"]
-prototype = "KR.SCALE"
+prototype = "KR.SCALE (x)"
 prototype_set = "KR.SCALE x"
 short = "get/set current scale"
 
 ["KR.POS"]
-prototype = "KR.POS x y"
+prototype = "KR.POS x y (z)"
 prototype_set = "KR.POS x y z"
 short = "get/set position `z` for track `z`, parameter `y`"
 description = """
@@ -77,12 +77,12 @@ Parameters:
 """
 
 ["KR.L.ST"]
-prototype = "KR.L.ST x y"
+prototype = "KR.L.ST x y (z)"
 prototype_set = "KR.L.ST x y z"
 short = "get loop start for track `x`, parameter `y` / set to `z`"
 
 ["KR.L.LEN"]
-prototype = "KR.L.LEN x y"
+prototype = "KR.L.LEN x y (z)"
 prototype_set = "KR.L.LEN x y z"
 short = "get length of track `x`, parameter `y` / set to `z`"
 
@@ -95,7 +95,7 @@ prototype = "KR.CV x "
 short = "get the current CV value for channel `x`"
 
 ["KR.MUTE"]
-prototype = "KR.MUTE x"
+prototype = "KR.MUTE x (y)"
 prototype_set = "KR.MUTE x y"
 short = "get/set mute state for channel `x` ( 1 = muted, 0 = unmuted )"
 
@@ -108,7 +108,7 @@ prototype = "KR.CLK x"
 short = "advance the clock for channel `x` (channel must have teletype clocking enabled)"
 
 ["KR.PG"]
-prototype = "KR.PG"
+prototype = "KR.PG (x)"
 prototype_set = "KR.PG x"
 short = "get/set the active page"
 description = """
@@ -127,7 +127,7 @@ Get or change the current parameter page. Numbering:
 """
 
 ["KR.CUE"]
-prototype = "KR.CUE"
+prototype = "KR.CUE (x)"
 prototype_set = "KR.CUE x"
 short = "get/set the cued pattern"
 description = """
@@ -135,7 +135,7 @@ Get or change the cued pattern. Numbered from 0.
 """
 
 ["KR.DIR"]
-prototype = "KR.DIR"
+prototype = "KR.DIR (x)"
 prototype_set = "KR.DIR x"
 short = "get/set the step direction"
 description = """
@@ -148,17 +148,17 @@ short = "get the current duration value for channel `x`"
 
 
 ["ME.PRE"]
-prototype = "ME.PRE"
+prototype = "ME.PRE (x)"
 prototype_set = "ME.PRE x"
 short = "return current preset / load preset `x`"
 
 ["ME.SCALE"]
-prototype = "ME.SCALE"
+prototype = "ME.SCALE (x)"
 prototype_set = "ME.SCALE x"
 short = "get/set current scale"
 
 ["ME.PERIOD"]
-prototype = "ME.PERIOD"
+prototype = "ME.PERIOD (x)"
 prototype_set = "ME.PERIOD x"
 short = "get/set internal clock period"
 
@@ -175,7 +175,7 @@ prototype = "ME.CV x"
 short = "get the current CV value for channel `x`"
 
 ["LV.PRE"]
-prototype = "LV.PRE"
+prototype = "LV.PRE (x)"
 prototype_set = "LV.PRE x"
 short = "return current preset / load preset `x`"
 
@@ -184,22 +184,22 @@ prototype = "LV.RES x"
 short = "reset, 0 for soft reset (on next ext. clock), 1 for hard reset"
 
 ["LV.POS"]
-prototype = "LV.POS"
+prototype = "LV.POS (x)"
 prototype_set = "LV.POS x"
 short = "get/set current position"
 
 ["LV.L.ST"]
-prototype = "LV.L.ST"
+prototype = "LV.L.ST (x)"
 prototype_set = "LV.L.ST x"
 short = "get/set loop start"
 
 ["LV.L.LEN"]
-prototype = "LV.L.LEN"
+prototype = "LV.L.LEN (x)"
 prototype_set = "LV.L.LEN x"
 short = "get/set loop length"
 
 ["LV.L.DIR"]
-prototype = "LV.L.DIR"
+prototype = "LV.L.DIR (x)"
 prototype_set = "LV.L.DIR x"
 short = "get/set loop direction"
 
@@ -208,7 +208,7 @@ prototype = "LV.CV x"
 short = "get the current CV value for channel `x`"
 
 ["CY.PRE"]
-prototype = "CY.PRE"
+prototype = "CY.PRE (x)"
 prototype_set = "CY.PRE x"
 short = "return current preset / load preset `x`"
 
@@ -217,7 +217,7 @@ prototype = "CY.RES x"
 short = "reset channel `x` ( 0 = all )"
 
 ["CY.POS"]
-prototype = "CY.POS x"
+prototype = "CY.POS x (y)"
 prototype_set = "CY.POS x y"
 short = "get / set position of channel `x` ( `x` = 0 to set all ), position between 0-255"
 

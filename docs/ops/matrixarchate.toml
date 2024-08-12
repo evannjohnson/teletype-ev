@@ -39,22 +39,22 @@ prototype = "MA.PSET pgm x y state"
 short = "set the connection at row `x` and column `y` in program `pgm` to `state` (1 - on, 0 - off)"
 
 ["MA.COL"]
-prototype = "MA.COL col"
+prototype = "MA.COL col (value)"
 prototype_set = "MA.COL col value"
 short = "get or set column `col` (as a 16 bit unsigned value where each bit represents a connection)"
 
 ["MA.PCOL"]
-prototype = "MA.PCOL pgm col"
+prototype = "MA.PCOL pgm col (value)"
 prototype_set = "MA.PCOL pgm col value"
 short = "get or set column `col` in program `pgm`"
 
 ["MA.ROW"]
-prototype = "MA.ROW row"
+prototype = "MA.ROW row (value)"
 prototype_set = "MA.ROW row value"
 short = "get or set row `row`"
 
 ["MA.PROW"]
-prototype = "MA.PROW pgm row"
+prototype = "MA.PROW pgm row (value)"
 prototype_set = "MA.PROW pgm row value"
 short = "get or set row `row` in program `pgm`"
 

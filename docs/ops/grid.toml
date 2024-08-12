@@ -37,7 +37,7 @@ press with `G.BTN.PR` and a fader press with `G.FDR.PR`.
 """
 
 ["G.GRP"]
-prototype = "G.GRP"
+prototype = "G.GRP (id)"
 prototype_set = "G.GRP id"
 short = "get/set current group"
 description = """
@@ -48,7 +48,7 @@ available.
 """
 
 ["G.GRP.EN"]
-prototype = "G.GRP.EN id"
+prototype = "G.GRP.EN id (x)"
 prototype_set = "G.GRP.EN id x"
 short = "enable/disable group or check if enabled"
 description = """
@@ -76,7 +76,7 @@ Switch groups. Enables the specified group, disables all others.
 """
 
 ["G.GRP.SC"]
-prototype = "G.GRP.SC id"
+prototype = "G.GRP.SC id (script)"
 prototype_set = "G.GRP.SC id script"
 short = "get/set group script"
 description = """
@@ -96,7 +96,7 @@ a script between multiple groups.
 """
 
 ["G.LED"]
-prototype = "G.LED x y"
+prototype = "G.LED x y (level)"
 prototype_set = "G.LED x y level"
 short = "get/set LED"
 description = """
@@ -192,7 +192,7 @@ choose which group to assign the buttons too.
 """
 
 ["G.BTN.EN"]
-prototype = "G.BTN.EN id"
+prototype = "G.BTN.EN id (x)"
 prototype_set = "G.BTN.EN id x"
 short = "enable/disable button or check if enabled"
 description = """
@@ -203,7 +203,7 @@ intact.
 """
 
 ["G.BTN.X"]
-prototype = "G.BTN.X id"
+prototype = "G.BTN.X id (x)"
 prototype_set = "G.BTN.X id x"
 short = "get/set button x coordinate"
 description = """
@@ -211,7 +211,7 @@ Get or set `x` coordinate for the specified button's top left corner.
 """
 
 ["G.BTN.Y"]
-prototype = "G.BTN.Y id"
+prototype = "G.BTN.Y id (y)"
 prototype_set = "G.BTN.Y id y"
 short = "get/set button y coordinate"
 description = """
@@ -219,7 +219,7 @@ Get or set `y` coordinate for the specified button's top left corner.
 """
 
 ["G.BTN.V"]
-prototype = "G.BTN.V id"
+prototype = "G.BTN.V id (value)"
 prototype_set = "G.BTN.V id value"
 short = "get/set button value"
 description = """
@@ -233,7 +233,7 @@ with the scene (both to flash and to USB sticks).
 """
 
 ["G.BTN.L"]
-prototype = "G.BTN.L id"
+prototype = "G.BTN.L id (level)"
 prototype_set = "G.BTN.L id level"
 short = "get/set button level"
 description = """
@@ -251,7 +251,7 @@ assigned to the same script.
 """
 
 ["G.BTNX"]
-prototype = "G.BTNX"
+prototype = "G.BTNX (x)"
 prototype_set = "G.BTNX x"
 short = "get/set x of last pressed button"
 description = """
@@ -260,7 +260,7 @@ the same as `G.BTN.X G.BTNI`.
 """
 
 ["G.BTNY"]
-prototype = "G.BTNY"
+prototype = "G.BTNY (y)"
 prototype_set = "G.BTNY y"
 short = "get/set y of last pressed button"
 description = """
@@ -269,7 +269,7 @@ the same as `G.BTN.Y G.BTNI`.
 """
 
 ["G.BTNV"]
-prototype = "G.BTNV"
+prototype = "G.BTNV (value)"
 prototype_set = "G.BTNV value"
 short = "get/set value of last pressed button"
 description = """
@@ -281,7 +281,7 @@ presses replace `NZ` with `EZ`).
 """
 
 ["G.BTNL"]
-prototype = "G.BTNL"
+prototype = "G.BTNL (level)"
 prototype_set = "G.BTNL level"
 short = "get/set level of last pressed button"
 description = """
@@ -457,7 +457,7 @@ choose which group to assign the faders too.
 """
 
 ["G.FDR.EN"]
-prototype = "G.FDR.EN id"
+prototype = "G.FDR.EN id (x)"
 prototype_set = "G.FDR.EN id x"
 short = "enable/disable fader or check if enabled"
 description = """
@@ -468,7 +468,7 @@ intact.
 """
 
 ["G.FDR.X"]
-prototype = "G.FDR.X id"
+prototype = "G.FDR.X id (x)"
 prototype_set = "G.FDR.X id x"
 short = "get/set fader x coordinate"
 description = """
@@ -476,7 +476,7 @@ Get or set `x` coordinate for the specified fader's top left corner.
 """
 
 ["G.FDR.Y"]
-prototype = "G.FDR.Y id"
+prototype = "G.FDR.Y id (y)"
 prototype_set = "G.FDR.Y id y"
 short = "get/set fader y coordinate"
 description = """
@@ -484,7 +484,7 @@ Get or set `y` coordinate for the specified fader's top left corner.
 """
 
 ["G.FDR.N"]
-prototype = "G.FDR.N id"
+prototype = "G.FDR.N id (value)"
 prototype_set = "G.FDR.N id value"
 short = "get/set fader value"
 description = """
@@ -504,7 +504,7 @@ with the scene (both to flash and to USB sticks).
 """
 
 ["G.FDR.V"]
-prototype = "G.FDR.V id"
+prototype = "G.FDR.V id (value)"
 prototype_set = "G.FDR.V id value"
 short = "get/set scaled fader value"
 description = """
@@ -515,7 +515,7 @@ any additional calculations, like this: `CV 1 G.FDR.V 1`.
 """
 
 ["G.FDR.L"]
-prototype = "G.FDR.L id"
+prototype = "G.FDR.L id (level)"
 prototype_set = "G.FDR.L id level"
 short = "get/set fader level"
 description = """
@@ -532,7 +532,7 @@ assigned to the same script.
 """
 
 ["G.FDRX"]
-prototype = "G.FDRX"
+prototype = "G.FDRX (x)"
 prototype_set = "G.FDRX x"
 short = "get/set x of last pressed fader"
 description = """
@@ -541,7 +541,7 @@ the same as `G.FDR.X G.FDRI`.
 """
 
 ["G.FDRY"]
-prototype = "G.FDRY"
+prototype = "G.FDRY (y)"
 prototype_set = "G.FDRY y"
 short = "get/set y of last pressed fader"
 description = """
@@ -550,7 +550,7 @@ the same as `G.BTN.Y G.BTNI`.
 """
 
 ["G.FDRN"]
-prototype = "G.FDRN"
+prototype = "G.FDRN (value)"
 prototype_set = "G.FDRN value"
 short = "get/set value of last pressed fader"
 description = """
@@ -559,7 +559,7 @@ Get or set the value of the last pressed fader. This is the same as
 """
 
 ["G.FDRV"]
-prototype = "G.FDRV"
+prototype = "G.FDRV (value)"
 prototype_set = "G.FDRV value"
 short = "get/set scaled value of last pressed fader"
 description = """
@@ -568,7 +568,7 @@ Get or set the scaled value of the last pressed fader. This is the same as
 """
 
 ["G.FDRL"]
-prototype = "G.FDRL"
+prototype = "G.FDRL (level)"
 prototype_set = "G.FDRL level"
 short = "get/set level of last pressed fader"
 description = """
