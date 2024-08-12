@@ -76,8 +76,8 @@ IF `x` == 0, do nothing.
 """
 
 ["Q.SRT"]
-prototype = "Q.SRT (SRT )"
-prototype_set = "Q.SRT "
+prototype = "Q.SRT (SRT)"
+prototype_set = "Q.SRT"
 short = "Sort all or part of queue"
 description = """
 Sort elements in queue.
