@@ -19,7 +19,7 @@ short = "move the turtle `x` cells in the X axis and `y` cells in the Y axis"
 
 ["@F"]
 prototype = "@F x1 y1 x2 y2"
-short = "set the turtle's fence to corners `x1`,`y1` and `x2`,`y2`"
+short = "set the turtle's fence to corners `x1`, `y1` and `x2`, `y2`"
 
 ["@FX1"]
 prototype = "@FX1 (x)"
