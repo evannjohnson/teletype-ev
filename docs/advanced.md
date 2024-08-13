@@ -173,5 +173,4 @@ the 'Grid control mode' section.
 If you want to try and build your own grid interfaces see the 'Grid Studies'
 section.
 
-There is a repository of teletype scenes at:
-https://github.com/scanner-darkly/teletype/wiki/CODE-EXCHANGE
+There is a repository of teletype scenes [on github](https://github.com/scanner-darkly/teletype/wiki/CODE-EXCHANGE).
