@@ -236,7 +236,8 @@ def main():
                             "--toc",
                             "--toc-depth=2",
                             engine,
-                            "--variable=papersize:A4"])
+                            "--variable=geometry:a5paper,margin=0.5in",
+                            "--variable=papersize:A5"])
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ documentclass: report
 geometry: margin=1in
 links-as-notes: true
 subparagraph: true
-fontsize: 12pt
+fontsize: 8pt
 mainfont: Roboto-Regular.ttf
 mainfontoptions:
 - Path={{fonts_dir}}/roboto-hinted/
