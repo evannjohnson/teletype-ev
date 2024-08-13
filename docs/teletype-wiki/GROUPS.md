@@ -29,5 +29,3 @@ You can also assign scripts to groups, and they will get executed whenever any c
 
 But perhaps the most useful purpose for groups is being able to create paged UIs.
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
-

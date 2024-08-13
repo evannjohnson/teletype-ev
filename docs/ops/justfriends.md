@@ -1,8 +1,5 @@
 ## Just Type
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}%
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}%
-
 More extensively covered in the [Just Friends Documentation](https://github.com/whimsicalraps/Just-Friends/blob/main/Just-Type.md).
 
 Copied below, modified and stripped of crow commands and unimplemented (proposed) teletype commands.
@@ -38,11 +35,11 @@ Some commands are 'set' only, while others and 'get' only, but many have both fu
 
 Furthermore, getters work quite differently on Teletype vs crow. For Teletype, the getter will query the value and return it directly. On crow, the response to a `ii.jf.get()` call will come through the `ii.jf.event( event, value )` function which you must add to your script. For an example, you can call `ii.jf.help()` and crow will show you what this event function should look like.
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 ### Remote control
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 
 These commands allow remote control over Just Friends. Imagine a set of invisible patch cables connected to the TRIGGERS and RUN jacks.
 

@@ -1,7 +1,5 @@
 ## Grid studies
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-
 ### Basic visualizations
 Let's start with some basic drawing. Open the Metro script and enter the following command:
 
