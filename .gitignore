@@ -1,5 +1,6 @@
 .DS_Store
 *.zip
+/docs/notes-pages/
 
 # Object files
 *.o
