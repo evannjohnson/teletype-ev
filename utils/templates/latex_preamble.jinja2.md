@@ -11,12 +11,12 @@ mainfontoptions:
 - BoldFont=Roboto-Bold.ttf
 - ItalicFont=Roboto-Italic.ttf
 - BoldItalicFont=Roboto-BoldItalic.ttf
-monofont: liquid-bigspace.ttf
+monofont: liquid-modified.ttf
 monofontoptions:
 - Path={{fonts_dir}}/liquid/
-- BoldFont=liquid-bigspace.ttf
-- ItalicFont=liquid-bigspace.ttf
-- BoldItalicFont=liquid-bigspace.ttf
+- BoldFont=liquid-modified.ttf
+- ItalicFont=liquid-modified.ttf
+- BoldItalicFont=liquid-modified.ttf
 header-includes:
 - \usepackage{titlesec}
 - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
