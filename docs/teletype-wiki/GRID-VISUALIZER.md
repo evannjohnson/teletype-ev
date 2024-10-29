@@ -1,7 +1,7 @@
 ## Grid visualizer
 As you may have discovered by now, when developing a grid scene you have to often switch between the grid and the keyboard, especially if something is not working as expected. This is where Grid Visualizer will be helpful. It allows you to not only see a visual grid representation but also emulate grid presses, so you might not even have to plug the grid until you complete your scene. As a matter of fact, Grid Visualizer allows you to use grid scenes without the actual grid!  
 
-![](./images/20240709_2332283932.png)
+![](./teletype-wiki/images/20240709_2332283932.png)
   
 Grid Visualizer is located on Live screen. To enable it, navigate to Live view and press `Alt-G`. You should now see a visual grid representation along with some additional information. Pressing `Alt-G` again will switch to the full grid mode. Press it again to get back to the default Live screen. You can still enter and execute commands while Grid Visualizer is on - this is a great way to test grid ops, as you can immediately see what it will look like. A good way to build up a grid interface is trying your ops in Live screen and then using history (`arrow up`) to get back to the command and copy it to an appropriate script. Don't forget you can execute `G.RST` to reset grid back to the initial clean state. If you're setting up your init script you can use `G.RST` and then execute the init script with `F10` to make sure it contains everything you need.  
   

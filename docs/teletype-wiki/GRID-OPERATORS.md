@@ -5,7 +5,7 @@ Controls are referenced by ids. Buttons can use ids from `0` to `255`, faders ca
 
 Defining a control enables it. Disabling a control will hide it. Disabling a group disables all controls within that group. `G.LED` and `G.REC` cannot be disabled, instead they have to be cleared.
 
-`x` and `y` specify the top left corner, `x` is the horizontal coordinate between `0` (left) and `15` (right),`y` is the vertical coordinate between `0` (top) and `15` (bottom). `w` and `h` are width and height. `level` is the brightness level between `0` (completely dark) and `15` (the brightest). There are two special brightness levels: `-1` (dim) and `-2` (brighten). Level -3 clears (makes it transparent again).
+`x` and `y` specify the top left corner, `x` is the horizontal coordinate between `0` (left) and `15` (right), `y` is the vertical coordinate between `0` (top) and `15` (bottom). `w` and `h` are width and height. `level` is the brightness level between `0` (completely dark) and `15` (the brightest). There are two special brightness levels: `-1` (dim) and `-2` (brighten). Level -3 clears (makes it transparent again).
 
 A control can only belong to one group at a time. Operators that don't take groups as a parameter will use the currently selected group which is set with `G.GRP`. There are 64 groups available (ids: `0` to `63`).
 
