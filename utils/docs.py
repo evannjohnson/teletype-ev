@@ -154,15 +154,15 @@ def common_md():
         "teletype-wiki/TRIGGER-SEQUENCER.md",
         "teletype-wiki/SAVE-GRID-STATE.md",
         "teletype-wiki/GROUPS.md",
-        "teletype-wiki/GRID-VISUALIZER-rawimages_converted.md"
+        "teletype-wiki/GRID-VISUALIZER.md"
     ]
     for doc in gridDocsBW:
         advanced += Path(DOCS_DIR / doc).read_text() + "\n\n"
     
     # gridDocsColor = [
-    #     "teletype-wiki/GRID-CONTROL-MODE-rawimages_converted.md",
+    #     "teletype-wiki/GRID-CONTROL-MODE.md",
     # ]
-    advanced += Path(DOCS_DIR / "teletype-wiki/GRID-CONTROL-MODE-rawimages_converted.md").read_text() + "\n\n"
+    advanced += Path(DOCS_DIR / "teletype-wiki/GRID-CONTROL-MODE.md").read_text() + "\n\n"
 
     pdf_alpha_ops = "\\appendix\n\n"
     pdf_alpha_ops += "# Alphabetical list of OPs and MODs\n\n"
