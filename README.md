@@ -1,7 +1,7 @@
 # changes from upstream
 This branch is for modifying the documenation building script (./utils/docs.py), adding new content, and changing formatting for the teletype manual, to make a manual for printing on A5 paper.
 
-Result:
+The printed result:
 - ![cover](./images/cover.jpg)
 - ![toc](./images/toc.jpg)
 - ![op-md](./images/op-md.jpg)
@@ -9,7 +9,7 @@ Result:
 
 There are some rough edges with the formatting, and I have not fully proofread the manual. It is possible there are sections that are completely borked, although I haven't come across any.
 
-Here is an approximate list of the changes:
+## approximate list of changes
 - I've set the font to a slightly modified version of the ["liquid" font from the norns repo](https://github.com/monome/norns/blob/main/resources/liquid.ttf)
     - adjusted font spacing and added a minus character
     - legibility is worse than the default "Roboto" monospaced font, but this change was for form, not function
@@ -46,20 +46,20 @@ Here are the steps that I used on a fresh Debian VM to build the PDF:
 Here's how it came out printed:
 
 I printed via [Doxzoo](https://doxzoo.com), with the settings:
-    - Paper size: A5
-    - Printed sides: Double sided
-    - Print in: Black & white
-    - Paper colour: Cream
-    - Paper finish: Matt (coloured)
-    - Paper weight: 80 gsm
-    - Binding position: Left long edge
-    - Coil colour: Clear
-    - Outer front cover: None
-    - Front cover: None
-    - Back cover: None
-    - Outer back cover: None
-    - No. of tabs: 0
-    - Corners: Square
+- Paper size: A5
+- Printed sides: Double sided
+- Print in: Black & white
+- Paper colour: Cream
+- Paper finish: Matt (coloured)
+- Paper weight: 80 gsm
+- Binding position: Left long edge
+- Coil colour: Clear
+- Outer front cover: None
+- Front cover: None
+- Back cover: None
+- Outer back cover: None
+- No. of tabs: 0
+- Corners: Square
 
 # teletype
 
