@@ -20,6 +20,7 @@ There are some rough edges with the formatting, and I have not fully proofread t
 - I've commented out i2c devices from `docs.py` that I don't want included in the manual
 - removed the `OP (set)` column from the OP reference pages, and merged it with the regular `OP` column. If an OP has an optional argument that can be passed to set, that argument is placed inside parentheses, like in the column header
     - ex. `SCRIPT.POL x (p)` means `SCRIPT.POL x` will get script `x`'s polarity, and `SCRIPT.POL x p` will set script `x`'s polarity to `p`
+- added page breaks
 - I've gotten a5 ruled paper PDFs from https://ruledpaper.net which are in the repo in `./docs/notes-pages`
     - these are not added programmatically, but manually after the PDF is built (to the end of the PDF)
 
