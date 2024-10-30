@@ -38,7 +38,7 @@ Here are the steps that I used on a fresh Debian VM to build the PDF:
 - modify `utils/docs.py` to include/exclude sections relevant to you
     - comment out (or uncomment) lines in the "OPS_SECTIONS" array (line 34)
     - to exclude the grid integration/grid studies section, comment out lines 148-165
-        - (the lines `advanced += Path(DOCS_DIR / doc).read_text() + "\n\n"` and `advanced += Path(DOCS_DIR / "teletype-wiki/GRID-CONTROL-MODE.md").read_text() + "\n\n")
+        - (the lines `advanced += Path(DOCS_DIR / doc).read_text() + "\n\n"` and `advanced += Path(DOCS_DIR / "teletype-wiki/GRID-CONTROL-MODE.md").read_text() + "\n\n"`)
 - `cd docs`
 - `../utils/docs.py teletype-manual.pdf`
 - the PDF should now be at `docs/teletype-manual.pdf`
