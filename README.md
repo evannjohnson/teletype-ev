@@ -1,5 +1,5 @@
 # changes from upstream
-This branch is for modifying the documenation building script (./utils/docs.py), adding new content, and changing formatting for the teletype manual, to make a manual for printing on A5 paper.
+This branch is for modifying the documenation building script (./utils/docs.py), adding new content, and changing formatting for the teletype manual, to make a PDF for printing on A5 paper.
 
 The printed result:
 - ![cover](./images/cover.jpg)
@@ -43,8 +43,6 @@ Here are the steps that I used on a fresh Debian VM to build the PDF:
 - the PDF should now be at `docs/teletype-manual.pdf`
 
 ## how I printed
-Here's how it came out printed:
-
 I printed via [Doxzoo](https://doxzoo.com), with the settings:
 - Paper size: A5
 - Printed sides: Double sided
