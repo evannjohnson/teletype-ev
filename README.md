@@ -1,3 +1,66 @@
+# changes from upstream
+This branch is for modifying the documenation building script (./utils/docs.py), adding new content, and changing formatting for the teletype manual, to make a manual for printing on A5 paper.
+
+Result:
+- ![cover](./images/cover.jpg)
+- ![toc](./images/toc.jpg)
+- ![op-md](./images/op-md.jpg)
+- ![op-table](./images/op-table.jpg)
+
+There are some rough edges with the formatting, and I have not fully proofread the manual. It is possible there are sections that are completely borked, although I haven't come across any.
+
+Here is an approximate list of the changes:
+- I've set the font to a slightly modified version of the ["liquid" font from the norns repo](https://github.com/monome/norns/blob/main/resources/liquid.ttf)
+    - adjusted font spacing and added a minus character
+    - legibility is worse than the default "Roboto" monospaced font, but this change was for form, not function
+- the changelog was removed
+- the [Just Type documentation](https://github.com/whimsicalraps/Just-Friends/blob/main/Just-Type.md) was added to the Just Friends section
+- I've added some pages to the "advanced" section of the manual from the [teletype wiki](https://github.com/scanner-darkly/teletype/wiki), like the grid integration and grid studies
+	- the pages are added in `docs.py`
+- I've commented out i2c devices from `docs.py` that I don't want included in the manual
+- removed the `OP (set)` column from the OP reference pages, and merged it with the regular `OP` column. If an OP has an optional argument that can be passed to set, that argument is placed inside parentheses, like in the column header
+    - ex. `SCRIPT.POL x (p)` means `SCRIPT.POL x` will get script `x`'s polarity, and `SCRIPT.POL x p` will set script `x`'s polarity to `p`
+- I've gotten a5 ruled paper PDFs from https://ruledpaper.net which are in the repo in `./docs/notes-pages`
+    - these are not added programmatically, but manually after the PDF is built (to the end of the PDF)
+
+## how to build
+Here are the steps that I used on a fresh Debian VM to build the PDF:
+- `sudo apt install python3`
+- `sudo apt install python3.11-venv`
+- `sudo apt install pandoc`
+- `sudo apt install texlive-latex-extra`
+- `sudo apt install texlive-xetex`
+- `git clone -b custom-pdf https://github.com/evannjohnson/teletype-ev`
+- `python3 -m venv ./.venv`
+- `source .venv/bin/activate`
+- `pip install -r utils/requirements.pip`
+- modify `utils/docs.py` to include/exclude sections relevant to you
+    - comment out (or uncomment) lines in the "OPS_SECTIONS" array (line 34)
+    - to exclude the grid integration/grid studies section, comment out lines 148-165
+        - (the lines `advanced += Path(DOCS_DIR / doc).read_text() + "\n\n"` and `advanced += Path(DOCS_DIR / "teletype-wiki/GRID-CONTROL-MODE.md").read_text() + "\n\n")
+- `cd docs`
+- `../utils/docs.py teletype-manual.pdf`
+- the PDF should now be at `docs/teletype-manual.pdf`
+
+## how I printed
+Here's how it came out printed:
+
+I printed via [Doxzoo](https://doxzoo.com), with the settings:
+    - Paper size: A5
+    - Printed sides: Double sided
+    - Print in: Black & white
+    - Paper colour: Cream
+    - Paper finish: Matt (coloured)
+    - Paper weight: 80 gsm
+    - Binding position: Left long edge
+    - Coil colour: Clear
+    - Outer front cover: None
+    - Front cover: None
+    - Back cover: None
+    - Outer back cover: None
+    - No. of tabs: 0
+    - Corners: Square
+
 # teletype
 
 monome eurorack module
