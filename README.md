@@ -31,6 +31,7 @@ Here are the steps that I used on a fresh Debian VM to build the PDF:
 - `sudo apt install texlive-latex-extra`
 - `sudo apt install texlive-xetex`
 - `git clone -b custom-pdf https://github.com/evannjohnson/teletype-ev`
+- `cd teletype-ev`
 - `python3 -m venv ./.venv`
 - `source .venv/bin/activate`
 - `pip install -r utils/requirements.pip`
