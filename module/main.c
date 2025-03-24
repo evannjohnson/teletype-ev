@@ -120,6 +120,8 @@ static aout_t aout[4];
 static bool metro_timer_enabled;
 static uint8_t front_timer;
 static uint8_t mod_key = 0, hold_key, hold_key_count = 0;
+static bool capslock_held = false;   // Track when CapsLock is being held
+static bool capslock_active = false; // Track when CapsLock toggle is active
 static uint64_t last_adc_tick = 0;
 static midi_behavior_t midi_behavior;
 
@@ -441,7 +443,9 @@ void handler_KeyTimer(int32_t data) {
             front_timer--;
     }
 
-    if (hold_key) {
+    // Only process key repeats if we have a valid hold_key
+    // and it's not CapsLock (which we're treating as a modifier)
+    if (hold_key && hold_key != HID_CAPS_LOCK) {
         if (hold_key_count > 4)
             process_keypress(hold_key, mod_key, true, false);
         else
@@ -460,21 +464,91 @@ void handler_HidDisconnect(int32_t data) {
 void handler_HidTimer(int32_t data) {
     if (hid_get_frame_dirty()) {
         const int8_t* frame = (const int8_t*)hid_get_frame_data();
+        const int8_t* old_frame = (const int8_t*)hid_get_frame_data(); // Used to check what was in the previous frame
 
+        // Get the original modifier key state
         mod_key = frame[0];
+
+        // Check for CapsLock key press/release
+        bool capslock_in_frame = false;
+        for (size_t j = 2; j < 8; j++) {
+            if (frame[j] == HID_CAPS_LOCK) {
+                capslock_in_frame = true;
+                break;
+            }
+        }
+
+        // Handle CapsLock state change
+        if (capslock_in_frame && !capslock_held) {
+            // CapsLock key was just pressed down
+            capslock_held = true;
+            // Treat CapsLock as a modifier like Ctrl
+            mod_key |= HID_MODIFIER_LEFT_CTRL;
+        }
+        else if (!capslock_in_frame && capslock_held) {
+            // CapsLock key was just released
+            capslock_held = false;
+
+            // Make sure we clear hold_key when CapsLock is released
+            // to prevent unwanted key repeats
+            if (hold_key) {
+                hold_key = 0;
+                hold_key_count = 0;
+            }
+        }
+
+        // If CapsLock is currently being held, add the Ctrl modifier
+        if (capslock_held) {
+            mod_key |= HID_MODIFIER_LEFT_CTRL;
+        }
+
+        // First, check for key releases
+        bool key_released = false;
         for (size_t i = 2; i < 8; i++) {
-            if (frame[i] == 0) {
-                if (i == 2) {
-                    hold_key_count = 0;
+            if (frame[i] == 0 && i == 2 && hold_key != 0) {
+                // A key was released
+                key_released = true;
+                hold_key_count = 0;
+
+                // Don't process the CapsLock key itself as a regular key
+                if (hold_key != HID_CAPS_LOCK) {
                     process_keypress(hold_key, mod_key, false, true);
-                    hold_key = 0;
+                }
+                hold_key = 0;
+                break;
+            }
+        }
+
+        // Next, check for new key presses only if no key was released
+        if (!key_released) {
+            for (size_t i = 2; i < 8; i++) {
+                if (frame[i] != 0 && frame_compare(frame[i]) == false) {
+                    hold_key = frame[i];
+                    hold_key_count = 0;
+
+                    // Don't process the CapsLock key itself as a regular key
+                    if (hold_key != HID_CAPS_LOCK) {
+                        process_keypress(hold_key, mod_key, false, false);
+                    }
+                    break;
                 }
             }
-            else if (frame_compare(frame[i]) == false) {
-                hold_key = frame[i];
-                hold_key_count = 0;
-                process_keypress(hold_key, mod_key, false, false);
+        }
+
+        // If we only have modifiers and no other keys, clear hold_key to prevent unwanted repeats
+        bool has_regular_key = false;
+        for (size_t i = 2; i < 8; i++) {
+            if (frame[i] != 0 && frame[i] != HID_CAPS_LOCK) {
+                has_regular_key = true;
+                break;
             }
+        }
+
+        if (!has_regular_key && hold_key != 0 && hold_key != HID_CAPS_LOCK) {
+            // We have a modifier but no regular key in the frame,
+            // so clear the hold_key to prevent unwanted repeats
+            hold_key = 0;
+            hold_key_count = 0;
         }
 
         set_old_frame(frame);
@@ -852,6 +926,12 @@ void process_keypress(uint8_t key, uint8_t mod_key, bool is_held_key,
 bool process_global_keys(uint8_t k, uint8_t m, bool is_held_key) {
     if (is_held_key)  // none of these want to work with held keys
         return false;
+
+    // <caps lock>: we handle it specially in handler_HidTimer
+    if (k == HID_CAPS_LOCK) {
+        // Don't process CapsLock itself as a regular key
+        return true;
+    }
 
     // <tab>: change modes, live to edit to pattern and back
     if (match_no_mod(m, k, HID_TAB)) {
