@@ -1,3 +1,6 @@
+# changes from upstream
+this branch `keyboard-mods` has modifications to the keyboard input handling, to suit my desired ergonomics
+
 # teletype
 
 monome eurorack module
